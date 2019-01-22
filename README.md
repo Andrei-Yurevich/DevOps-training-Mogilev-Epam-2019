@@ -1,1 +1,1 @@
-# DevOps-training-Mogilev-Epam-2019
+# Тренинг DevOps 2019
