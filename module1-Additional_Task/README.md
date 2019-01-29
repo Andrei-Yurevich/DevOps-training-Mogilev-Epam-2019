@@ -21,7 +21,7 @@ Then enable and start nfs server:</br></br>
 `/git 192.168.43.0/255.255.255.0(rw,sync,root_squash,no_subtree_check)`</br>
 `/git 192.168.43.167/255.255.255.0(rw,sync,root_squash,insecure,no_subtree_check)`</br>
 </br>
-First string for all hosts in my subnet. Second string for my windows host.</br>
+First string for all hosts in my subnet. Second string for my windows host.</br></br>
 `rw` — Allow read and write on my volume.</br>
 `sync` — Reply to requests only after the changes have been recorded.</br>
 `root_squash` — Client root user haven't special permissions to volume.</br>
