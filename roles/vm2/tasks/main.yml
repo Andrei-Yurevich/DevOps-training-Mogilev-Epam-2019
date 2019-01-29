@@ -1,0 +1,13 @@
+- name: change /etc/hosts
+  blockinfile:
+    path: /etc/hosts
+    block: |
+      {{ vm1_ip }} vm1.local
+
+- name: Copying ssh key
+  copy:
+    src: ./.vagrant/machines/vm1/virtualbox/private_key
+    dest: /home/{{ default_user }}/.ssh/id_rsa
+    owner: "{{ default_user }}"
+    group: "{{ default_user }}"
+    mode: 0600

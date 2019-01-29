@@ -1,0 +1,27 @@
+- name: "install yum packages"
+  yum:
+    name: "{{ package }}"
+  vars:
+    package:
+    - git
+    - vim 
+
+- name: "clone my repository"
+  git:
+    repo: https://github.com/Andrey1913/DevOps-training-Mogilev-Epam-2019
+    dest: ~/my_project
+    version: module2+addition_task
+
+- name: change /etc/hosts
+  blockinfile:
+    path: /etc/hosts
+    block: |
+      {{ vm2_ip }} vm2.local
+
+- name: Copying ssh key
+  copy:
+    src: ./.vagrant/machines/vm2/virtualbox/private_key
+    dest: /home/{{ default_user }}/.ssh/id_rsa
+    owner: "{{ default_user }}"
+    group: "{{ default_user }}"
+    mode: 0600

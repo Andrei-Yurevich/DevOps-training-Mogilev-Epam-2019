@@ -1,0 +1,5 @@
+- name: VM1 configuration 
+  become: yes
+  hosts: vm1
+  roles:
+    - vm1
