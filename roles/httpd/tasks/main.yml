@@ -1,0 +1,49 @@
+- name: "install yum packages"
+  yum:
+    name: "{{ package }}"
+  vars:
+    package:
+    - httpd
+    - vim 
+
+- name: Remove bad ajp library
+  file:
+    path: /etc/httpd/modules/mod_jk.so
+    state: absent
+
+- name: Copy ajp library 
+  copy:
+    src: /vagrant/sources/mod_jk.so
+    dest: /etc/httpd/modules/
+    owner: root
+    group: root
+    mode: 0755
+    remote_src: yes
+    serole: object_r
+    setype: httpd_modules_t
+    seuser: unconfined_u
+    selevel: s0
+
+- name: Create apache config file
+  template:
+    src: workers.properties.j2
+    dest: /etc/httpd/conf/workers.properties
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Append lb config to httpd.conf
+  blockinfile:
+    path: /etc/httpd/conf/httpd.conf
+    block: |
+      LoadModule jk_module modules/mod_jk.so
+      JkWorkersFile conf/workers.properties
+      JkShmFile /tmp/shm
+      JkLogFile logs/mod_jk.log
+      JkLogLevel info
+      JkMount /{{ context }}* balancer
+
+- name: Enable and start httpd
+  shell: systemctl enable httpd && systemctl start httpd
+
+

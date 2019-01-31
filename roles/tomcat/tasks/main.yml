@@ -1,0 +1,61 @@
+- name: "install java 1.8.0"
+  yum:
+    name: "{{ package }}"
+  vars:
+    package:
+    - java-1.8.0-openjdk
+    - vim
+
+- name: Create module 3 directory
+  file:
+    path: /opt/module3
+    state: directory
+    mode: 0744
+    owner: vagrant
+    group: vagrant
+
+- name: Copy tomcat archive
+  copy:
+    src: ./sources/apache-tomcat-8.5.37.tar.gz
+    dest: /opt/module3
+    owner: vagrant
+    group: vagrant
+    mode: 0644
+    backup: yes
+
+- name: Extract tomcat into /opt/module3
+  unarchive:
+    src: /opt/module3/apache-tomcat-8.5.37.tar.gz
+    dest: /opt/module3/
+    owner: vagrant
+    group: vagrant
+    remote_src: yes
+
+- name: Create new context
+  file:
+    path: /opt/module3/apache-tomcat-8.5.37/webapps/{{ context }}
+    state: directory
+    mode: 0744
+    owner: vagrant
+    group: vagrant
+
+- name: Create index.html for first tomcat
+  template:  
+    src: tomcat1.html.j2
+    dest: /opt/module3/apache-tomcat-8.5.37/webapps/{{ context }}/index.html
+    owner: vagrant
+    group: vagrant
+    mode: 0644
+  when: ansible_port == 2200 
+
+- name: Create index.html for second tomcat 
+  template:
+    src: tomcat2.html.j2
+    dest: /opt/module3/apache-tomcat-8.5.37/webapps/{{ context }}/index.html
+    owner: vagrant
+    group: vagrant
+    mode: 0644
+  when: ansible_port == 2201
+
+- name: start tomcat
+  shell: nohup /opt/module3/apache-tomcat-8.5.37/bin/catalina.sh start &

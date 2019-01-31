@@ -1,5 +1,5 @@
-[vm1]
+[httpd]
 127.0.0.1 ansible_ssh_port=2222
 
-[vm2]
+[tomcat1]
 127.0.0.1 ansible_ssh_port=2200
