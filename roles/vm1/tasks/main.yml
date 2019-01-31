@@ -1,4 +1,4 @@
-- name: "install yum packages"
+- name: Install yum packages.
   yum:
     name: "{{ package }}"
   vars:
@@ -6,22 +6,28 @@
     - git
     - vim 
 
-- name: "clone my repository"
+- name: Clone my repository.
   git:
     repo: https://github.com/Andrey1913/DevOps-training-Mogilev-Epam-2019
     dest: ~/my_project
     version: module2+addition_task
 
-- name: change /etc/hosts
+- name: Change /etc/hosts. 
   blockinfile:
     path: /etc/hosts
     block: |
       {{ vm2_ip }} vm2.local
 
-- name: Copying ssh key
+- name: Set authorized key.
+  authorized_key:
+    user: "{{ default_user }}"
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCjK4gDkoo0jkxHwyNzMh/9nQkZ3jjWm507iM/ShNmApzweaVKCdwoOEUtfErqdOMlSDL78jDuFi3e/WV2xy4SlHRIvRlQ5LVqhE7Yo1lffFJjaVpu3pF7yltuTvK8wU/PE1uns5ISAfdJm7iwg7HgKL7kgwKGx+8Wr2zKdk4EQPW2EdZvjtOfxJTDxsr+7Fswy7qXy/tXOe55RlW20oyqr4tvGXN3Aut0WmtKJVSkcAPtAxDnJbPuksX1zopLwXolnxKldBM89MwH2ZTeuE0wjd9kR691AyTsWIdnAYfmKPdZSV/yTup1pqGaiPcwlGjMDrQqp7zp8rq+rhzrE6ZSnHUXgeuyNQNox7UPs99YlZUdFgDbKHHSmxpQiMYLRxyuiyvm6gmYQkQ9NMDB9YNaU/bj7NrOAc+jVfwN/fkdkk5yvbgoffo/GJ3NHu5T5TPWVQo0UNoOy0DfVEzVLb4AO2uOy49RyJKhdYLTXDUthMkIcwuESydq3jRtiGY2/NSKlHHPSptcbmw/HfyGu4xjWsP4OIFsd3C2UtvdhE63z+y/cb9N22f+MgZphmHS+ThEHfgqq0TulqrWFmvImqHmCqHaW6wKGokkCWmXEpevqHY8S1C2EW0ZJP3nMNcyNnqy/ttuNAgwkhkGiUol5UO92l57aUGDpxLCeVzXEaZaAuw== vagrant@VM2"
+
+- name: Set private key.
   copy:
-    src: ./.vagrant/machines/vm2/virtualbox/private_key
-    dest: /home/{{ default_user }}/.ssh/id_rsa
+    src: ./unsecure_key
+    dest: "/home/{{ default_user }}/.ssh/id_rsa"
+    mode: 0600
     owner: "{{ default_user }}"
     group: "{{ default_user }}"
-    mode: 0600
