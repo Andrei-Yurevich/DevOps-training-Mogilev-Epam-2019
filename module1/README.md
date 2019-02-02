@@ -62,3 +62,10 @@ ip адрес — 192.168.56.13<br />
 	`ip link set enp0s3 down`<br />
 	`ip link set enp0s8 up`<br />
 
+Что бы не ходить в интернет делаем: <br />
+`sudo iptables -j DROP`<br />
+`sudo iptables - A INPUT -s 10.0.2.2 -d 192.168.56.13 -j ACCEPT`<br />
+`sudo iptables - A OUTPUT -s 10.0.2.2 -d 192.168.56.13 -j ACCEPT`<br />
+`sudo iptables -A INPUT -s 192.168.56.0/24 -d 192.168.56.13 -j ACCEPT`<br />
+`sudo iptables -A FORWARD -s 192.168.56.0/24 -d 192.168.56.13 -j ACCEPT`<br />
+`sudo iptables -A OUTPUT -s 192.168.56.0/24 -d 192.168.56.13 -j ACCEPT`<br />
