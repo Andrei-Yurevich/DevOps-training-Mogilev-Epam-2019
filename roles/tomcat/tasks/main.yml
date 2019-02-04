@@ -39,23 +39,9 @@
     owner: vagrant
     group: vagrant
 
-- name: Create index.html for first tomcat
-  template:  
-    src: tomcat1.html.j2
-    dest: /opt/module3/apache-tomcat-8.5.37/webapps/{{ context }}/index.html
-    owner: vagrant
-    group: vagrant
-    mode: 0644
-  when: ansible_port == 2200 
+- name: Create index.html tomcat 
+  shell: hostname > /opt/module3/apache-tomcat-8.5.37/webapps/{{ context }}/index.html
 
-- name: Create index.html for second tomcat 
-  template:
-    src: tomcat2.html.j2
-    dest: /opt/module3/apache-tomcat-8.5.37/webapps/{{ context }}/index.html
-    owner: vagrant
-    group: vagrant
-    mode: 0644
-  when: ansible_port == 2201
 
 - name: start tomcat
   shell: nohup /opt/module3/apache-tomcat-8.5.37/bin/catalina.sh start &

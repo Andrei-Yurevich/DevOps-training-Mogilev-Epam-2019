@@ -1,3 +1,11 @@
+require 'fileutils'
+# - Ебанёт?
+# - Не должно.
+$tomcats_count = 3
+text = File.read("./roles/httpd/templates/workers.properties.j2")
+replace = text.gsub(/.*set.*/, "{% set tomcats_count = #$tomcats_count %}")
+File.open("./roles/httpd/templates/workers.properties.j2", "w") {|file| file.puts replace}
+
 Vagrant.configure("2") do |config|
 
   config.vm.define "httpd_vm" do |httpd_vm|
@@ -9,26 +17,17 @@ Vagrant.configure("2") do |config|
       ansible.playbook = "httpd_vm.yml"
       ansible.verbose = true
     end
- 
   end
 
-  config.vm.define "tomcat1" do |tomcat1|
-    tomcat1.vm.box = "centos/7"
-    tomcat1.vm.network :private_network, ip: "192.168.0.2"
-    tomcat1.vm.hostname = "tomcat1"
-    tomcat1.vm.provision "ansible" do |ansible|
-      ansible.playbook = "tomcat.yml"
-      ansible.verbose = true
-    end
-  end
-
-  config.vm.define "tomcat2" do |tomcat2|
-    tomcat2.vm.box = "centos/7"
-    tomcat2.vm.network :private_network, ip: "192.168.0.3"
-    tomcat2.vm.hostname = "tomcat2"
-    tomcat2.vm.provision "ansible" do |ansible|
-      ansible.playbook = "tomcat.yml"
-      ansible.verbose = true
+  (1..$tomcats_count).each do |i|
+    config.vm.define "tomcat#{i}" do |tomcat|
+      tomcat.vm.box = "centos/7"
+      tomcat.vm.network :private_network, ip: "192.168.0.#{1+i}"
+      tomcat.vm.hostname = "tomcat#{i}"
+      tomcat.vm.provision "ansible" do |ansible|
+        ansible.playbook = "tomcat.yml"
+        ansible.verbose = true
+      end
     end
   end
 

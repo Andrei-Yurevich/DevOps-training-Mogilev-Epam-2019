@@ -1,15 +1,14 @@
+{% set tomcats_count = 3 %}
 worker.list=balancer,stat
 
-worker.tomcat1.host={{ vm1_ip }}
-worker.tomcat1.port=8009
-worker.tomcat1.type=ajp13
+{% for i in range(1,tomcats_count+1) %}
+worker.tomcat{{ i }}.host=192.168.0.{{ i+1 }}
+worker.tomcat{{ i }}.port=8009
+worker.tomcat{{ i }}.type=ajp13
 
-worker.tomcat2.host={{ vm2_ip }}
-worker.tomcat2.port=8009
-worker.tomcat2.type=ajp13
+{% endfor %}
 
 worker.balancer.type=lb
-worker.balancer.balance_workers=tomcat1,tomcat2
+worker.balancer.balance_workers={% for i in range(1,tomcats_count) %}tomcat{{ i }},{% if loop.last %}tomcat{{ i+1 }}{% endif %}{% endfor %}
 
 worker.stat.type=status
-

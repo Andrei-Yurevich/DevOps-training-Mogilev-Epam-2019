@@ -1,5 +1,5 @@
 - name: all tomcats configuration
   become: yes
-  hosts: tomcat1 tomcat2
+  hosts: all
   roles:
     - tomcat

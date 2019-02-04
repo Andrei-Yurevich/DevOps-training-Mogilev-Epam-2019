@@ -4,14 +4,14 @@
   vars:
     package:
     - httpd
-    - vim 
+    - vim
 
 - name: Remove bad ajp library
   file:
     path: /etc/httpd/modules/mod_jk.so
     state: absent
 
-- name: Copy ajp library 
+- name: Copy ajp library
   copy:
     src: /vagrant/sources/mod_jk.so
     dest: /etc/httpd/modules/
@@ -45,5 +45,3 @@
 
 - name: Enable and start httpd
   shell: systemctl enable httpd && systemctl start httpd
-
-

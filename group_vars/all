@@ -1,6 +1,1 @@
-hostname: 'VM1'
-hostname: "VM2"
-vm2_ip: '192.168.0.3'
-vm1_ip: "192.168.0.2"
-default_user: 'vagrant'
 context: 'testlb'
