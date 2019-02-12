@@ -16,6 +16,11 @@ war {
      archiveName='task4.war'
 }
 
+task create_dir doFirst {
+    String dir=project.buildDir
+    mkdir dir+"/resources/main"
+}
+
 task a_create_greater_file << {
     def greater_file = new File ("build/resources/main/greeter.txt")
     println "current version:"+ version
@@ -30,6 +35,8 @@ task incrementVersion << {
     String s="version="+major+ "." +m
     def properties_file = new File('gradle.properties')
     properties_file.write s
+    println  "now "+s
 }
 
 war.dependsOn a_create_greater_file
+a_create_greater_file.dependsOn create_dir
