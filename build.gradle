@@ -16,8 +16,8 @@ war {
      archiveName='task4.war'
 }
 
-task a_create_greater_file << {
-    def greater_file = new File ("./src/main/webapp/greeter.txt")
+task a_create_greater_file (dependsOn: processResources) << {
+    def greater_file = new File ("build/resources/main/greeter.txt")
     println "current version:"+ version
     greater_file.write version
 }
