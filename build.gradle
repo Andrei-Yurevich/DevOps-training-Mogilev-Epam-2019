@@ -17,7 +17,7 @@ war {
 }
 
 task a_create_greater_file (dependsOn: processResources) << {
-    def greater_file = new File ("build/resources/main/greeter.txt")
+    def greater_file = new File ("build/resources/main/greeting.txt")
     println "current version:"+ version
     greater_file.write version
 }
