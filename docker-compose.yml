@@ -1,0 +1,41 @@
+version: '2'
+
+services:
+  collectd1:
+    container_name: collectd1
+    build:
+      context: ./collectd
+      dockerfile: Dockerfile
+    privileged: true
+    network_mode: host
+    volumes:
+      - /proc:/mnt/proc:ro
+
+  collectd2:
+    container_name: collectd2
+    build:
+      context: ./collectd2
+      dockerfile: Dockerfile
+    privileged: true
+  
+  influxdb:
+    container_name: influxdb
+    image: influxdb:1.0
+    ports:
+      - "8083:8083"
+      - "8086:8086"
+      - "25826:25826/udp"
+    volumes:
+      - /var/lib/influxdb
+      - ./influxdb/influxdb.conf:/etc/influxdb/influxdb.conf
+      - ./influxdb/types.db:/usr/share/collectd/types.db:ro
+
+  grafana:
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - /var/lib/grafana
+    build:
+      context: ./grafana
+      dockerfile: Dockerfile
