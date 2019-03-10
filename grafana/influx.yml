@@ -1,0 +1,11 @@
+apiVersion: 1
+
+datasources:
+  - name: module7
+    type: influxdb
+    access: proxy
+    database: collectd
+    user: ""
+    password: ""
+    url: http://influxdb:8086
+    isDefault: true

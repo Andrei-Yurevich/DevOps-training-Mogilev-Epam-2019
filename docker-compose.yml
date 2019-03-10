@@ -16,7 +16,8 @@ services:
     build:
       context: ./collectd2
       dockerfile: Dockerfile
-    privileged: true
+    hostname: collectd-itself
+    #privileged: true
   
   influxdb:
     container_name: influxdb
