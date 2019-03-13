@@ -12,10 +12,12 @@
       }
     ]
   },
+  "description": "This Dashboard provides a general overview of a host, with templating to select the datasource and hostname.",
   "editable": true,
-  "gnetId": null,
-  "graphTooltip": 0,
+  "gnetId": 554,
+  "graphTooltip": 1,
   "id": 1,
+  "iteration": 1552477026084,
   "links": [],
   "panels": [
     {
@@ -23,372 +25,30 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "module7",
+      "editable": true,
+      "error": false,
       "fill": 1,
+      "grid": {},
       "gridPos": {
-        "h": 9,
+        "h": 7,
         "w": 12,
         "x": 0,
         "y": 0
       },
-      "id": 4,
+      "id": 5,
+      "isNew": true,
       "legend": {
-        "avg": false,
+        "alignAsTable": true,
+        "avg": true,
         "current": false,
-        "max": false,
-        "min": false,
+        "hideZero": true,
+        "max": true,
+        "min": true,
+        "rightSide": true,
         "show": true,
         "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "connected",
-      "percentage": false,
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "alias": "used",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "memory_value",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "value"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "mean"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "type_instance",
-              "operator": "=",
-              "value": "used"
-            },
-            {
-              "condition": "AND",
-              "key": "host",
-              "operator": "=",
-              "value": "10.0.2.15"
-            }
-          ]
-        },
-        {
-          "alias": "cached",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "memory_value",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "refId": "B",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "value"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "mean"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "type_instance",
-              "operator": "=",
-              "value": "cached"
-            },
-            {
-              "condition": "AND",
-              "key": "host",
-              "operator": "=",
-              "value": "10.0.2.15"
-            }
-          ]
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "localhost RAM",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "fill": 1,
-      "gridPos": {
-        "h": 9,
-        "w": 12,
-        "x": 12,
-        "y": 0
-      },
-      "id": 6,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "connected",
-      "percentage": false,
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "alias": "used",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "memory_value",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "value"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "mean"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "type_instance",
-              "operator": "=",
-              "value": "used"
-            },
-            {
-              "condition": "AND",
-              "key": "host",
-              "operator": "=",
-              "value": "collectd-itself"
-            }
-          ]
-        },
-        {
-          "alias": "cached",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "memory_value",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "refId": "B",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "value"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "mean"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "type_instance",
-              "operator": "=",
-              "value": "cached"
-            },
-            {
-              "condition": "AND",
-              "key": "host",
-              "operator": "=",
-              "value": "collectd-itself"
-            }
-          ]
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "collectd itself RAM",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "fill": 1,
-      "gridPos": {
-        "h": 9,
-        "w": 12,
-        "x": 0,
-        "y": 9
-      },
-      "id": 2,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
+        "values": true
       },
       "lines": true,
       "linewidth": 1,
@@ -405,10 +65,12 @@
       "targets": [
         {
           "alias": "idle",
+          "dsType": "influxdb",
+          "expr": "",
           "groupBy": [
             {
               "params": [
-                "$__interval"
+                "$interval"
               ],
               "type": "time"
             },
@@ -419,10 +81,10 @@
               "type": "fill"
             }
           ],
+          "intervalFactor": 2,
           "measurement": "cpu_value",
-          "orderByTime": "ASC",
           "policy": "default",
-          "refId": "A",
+          "refId": "B",
           "resultFormat": "time_series",
           "select": [
             [
@@ -440,24 +102,281 @@
           ],
           "tags": [
             {
-              "key": "type_instance",
-              "operator": "=",
-              "value": "idle"
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$host$/"
             },
             {
               "condition": "AND",
-              "key": "host",
+              "key": "type_instance",
               "operator": "=",
-              "value": "10.0.2.15"
+              "value": "idle"
+            }
+          ]
+        },
+        {
+          "alias": "iowait",
+          "dsType": "influxdb",
+          "expr": "",
+          "groupBy": [
+            {
+              "params": [
+                "$interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "intervalFactor": 2,
+          "measurement": "cpu_value",
+          "policy": "default",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$host$/"
+            },
+            {
+              "condition": "AND",
+              "key": "type_instance",
+              "operator": "=",
+              "value": "wait"
+            }
+          ]
+        },
+        {
+          "alias": "irq",
+          "dsType": "influxdb",
+          "expr": "",
+          "groupBy": [
+            {
+              "params": [
+                "$interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "intervalFactor": 2,
+          "measurement": "cpu_value",
+          "policy": "default",
+          "refId": "D",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$host$/"
+            },
+            {
+              "condition": "AND",
+              "key": "type_instance",
+              "operator": "=",
+              "value": "interrupt"
+            }
+          ]
+        },
+        {
+          "alias": "nice",
+          "dsType": "influxdb",
+          "expr": "",
+          "groupBy": [
+            {
+              "params": [
+                "$interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "intervalFactor": 2,
+          "measurement": "cpu_value",
+          "policy": "default",
+          "refId": "E",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$host$/"
+            },
+            {
+              "condition": "AND",
+              "key": "type_instance",
+              "operator": "=",
+              "value": "nice"
+            }
+          ]
+        },
+        {
+          "alias": "softirq",
+          "dsType": "influxdb",
+          "expr": "",
+          "groupBy": [
+            {
+              "params": [
+                "$interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "intervalFactor": 2,
+          "measurement": "cpu_value",
+          "policy": "default",
+          "refId": "F",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$host$/"
+            },
+            {
+              "condition": "AND",
+              "key": "type_instance",
+              "operator": "=",
+              "value": "softirq"
+            }
+          ]
+        },
+        {
+          "alias": "steal",
+          "dsType": "influxdb",
+          "expr": "",
+          "groupBy": [
+            {
+              "params": [
+                "$interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "intervalFactor": 2,
+          "measurement": "cpu_value",
+          "policy": "default",
+          "refId": "G",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$host$/"
+            },
+            {
+              "condition": "AND",
+              "key": "type_instance",
+              "operator": "=",
+              "value": "steal"
             }
           ]
         },
         {
           "alias": "system",
+          "dsType": "influxdb",
+          "expr": "",
           "groupBy": [
             {
               "params": [
-                "$__interval"
+                "$interval"
               ],
               "type": "time"
             },
@@ -468,10 +387,10 @@
               "type": "fill"
             }
           ],
+          "intervalFactor": 2,
           "measurement": "cpu_value",
-          "orderByTime": "ASC",
           "policy": "default",
-          "refId": "B",
+          "refId": "H",
           "resultFormat": "time_series",
           "select": [
             [
@@ -489,15 +408,66 @@
           ],
           "tags": [
             {
-              "key": "type_instance",
-              "operator": "=",
-              "value": "system"
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$host$/"
             },
             {
               "condition": "AND",
-              "key": "host",
+              "key": "type_instance",
               "operator": "=",
-              "value": "10.0.2.15"
+              "value": "system"
+            }
+          ]
+        },
+        {
+          "alias": "user",
+          "dsType": "influxdb",
+          "expr": "",
+          "groupBy": [
+            {
+              "params": [
+                "$interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "intervalFactor": 2,
+          "measurement": "cpu_value",
+          "policy": "default",
+          "refId": "I",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$host$/"
+            },
+            {
+              "condition": "AND",
+              "key": "type_instance",
+              "operator": "=",
+              "value": "user"
             }
           ]
         }
@@ -506,11 +476,12 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "localhost CPU",
+      "title": "CPU Usage",
       "tooltip": {
+        "msResolution": true,
         "shared": true,
         "sort": 0,
-        "value_type": "individual"
+        "value_type": "cumulative"
       },
       "type": "graph",
       "xaxis": {
@@ -548,14 +519,239 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "module7",
+      "editable": true,
+      "error": false,
       "fill": 1,
+      "grid": {},
       "gridPos": {
-        "h": 9,
+        "h": 7,
         "w": 12,
         "x": 12,
-        "y": 9
+        "y": 0
       },
-      "id": 8,
+      "id": 6,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": false,
+        "max": true,
+        "min": true,
+        "rightSide": true,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "short",
+          "dsType": "influxdb",
+          "expr": "",
+          "groupBy": [
+            {
+              "params": [
+                "$interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "intervalFactor": 2,
+          "measurement": "load_shortterm",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$host$/"
+            }
+          ]
+        },
+        {
+          "alias": "medium",
+          "dsType": "influxdb",
+          "expr": "",
+          "groupBy": [
+            {
+              "params": [
+                "$interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "intervalFactor": 2,
+          "measurement": "load_midterm",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$host$/"
+            }
+          ]
+        },
+        {
+          "alias": "long",
+          "dsType": "influxdb",
+          "expr": "",
+          "groupBy": [
+            {
+              "params": [
+                "$interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "intervalFactor": 2,
+          "measurement": "load_longterm",
+          "policy": "default",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$host$/"
+            }
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Load Average",
+      "tooltip": {
+        "msResolution": true,
+        "shared": true,
+        "sort": 0,
+        "value_type": "cumulative"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "module7",
+      "editable": true,
+      "error": false,
+      "fill": 1,
+      "grid": {},
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 7
+      },
+      "id": 7,
+      "isNew": true,
       "legend": {
         "avg": false,
         "current": false,
@@ -579,11 +775,13 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "idle",
+          "alias": "used",
+          "dsType": "influxdb",
+          "expr": "",
           "groupBy": [
             {
               "params": [
-                "$__interval"
+                "$interval"
               ],
               "type": "time"
             },
@@ -594,10 +792,12 @@
               "type": "fill"
             }
           ],
-          "measurement": "cpu_value",
-          "orderByTime": "ASC",
+          "intervalFactor": 2,
+          "measurement": "memory_value",
           "policy": "default",
-          "refId": "A",
+          "query": "SELECT mean(\"value\") FROM \"memory_value\" WHERE \"host\" =~ /^$host$/ AND \"type_instance\" = 'used' AND $timeFilter GROUP BY time($interval) fill(null)",
+          "rawQuery": true,
+          "refId": "B",
           "resultFormat": "time_series",
           "select": [
             [
@@ -615,23 +815,109 @@
           ],
           "tags": [
             {
-              "key": "type_instance",
-              "operator": "=",
-              "value": "idle"
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$host$/"
             },
             {
               "condition": "AND",
-              "key": "host",
+              "key": "type_instance",
               "operator": "=",
-              "value": "collectd-itself"
+              "value": "used"
             }
           ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Memory",
+      "tooltip": {
+        "msResolution": true,
+        "shared": true,
+        "sort": 0,
+        "value_type": "cumulative"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "bytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
         },
         {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "module7",
+      "editable": true,
+      "error": false,
+      "fill": 1,
+      "grid": {},
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 7
+      },
+      "id": 8,
+      "isNew": true,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "free",
+          "dsType": "influxdb",
+          "expr": "",
           "groupBy": [
             {
               "params": [
-                "$__interval"
+                "$interval"
               ],
               "type": "time"
             },
@@ -642,8 +928,8 @@
               "type": "fill"
             }
           ],
-          "measurement": "cpu_value",
-          "orderByTime": "ASC",
+          "intervalFactor": 2,
+          "measurement": "memory_value",
           "policy": "default",
           "refId": "B",
           "resultFormat": "time_series",
@@ -663,15 +949,117 @@
           ],
           "tags": [
             {
-              "key": "type_instance",
-              "operator": "=",
-              "value": "system"
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$host$/"
             },
             {
               "condition": "AND",
-              "key": "host",
+              "key": "type_instance",
               "operator": "=",
-              "value": "collectd-itself"
+              "value": "free"
+            }
+          ]
+        },
+        {
+          "alias": "buffered",
+          "dsType": "influxdb",
+          "expr": "",
+          "groupBy": [
+            {
+              "params": [
+                "$interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "intervalFactor": 2,
+          "measurement": "memory_value",
+          "policy": "default",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$host$/"
+            },
+            {
+              "condition": "AND",
+              "key": "type_instance",
+              "operator": "=",
+              "value": "buffered"
+            }
+          ]
+        },
+        {
+          "alias": "cached",
+          "dsType": "influxdb",
+          "expr": "",
+          "groupBy": [
+            {
+              "params": [
+                "$interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "intervalFactor": 2,
+          "measurement": "memory_value",
+          "policy": "default",
+          "refId": "D",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$host$/"
+            },
+            {
+              "condition": "AND",
+              "key": "type_instance",
+              "operator": "=",
+              "value": "cached"
             }
           ]
         }
@@ -680,11 +1068,12 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "collectd itself CPU",
+      "title": "Memory Distrubution",
       "tooltip": {
+        "msResolution": true,
         "shared": true,
         "sort": 0,
-        "value_type": "individual"
+        "value_type": "cumulative"
       },
       "type": "graph",
       "xaxis": {
@@ -696,7 +1085,218 @@
       },
       "yaxes": [
         {
+          "format": "bytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
           "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "module7",
+      "editable": true,
+      "error": false,
+      "fill": 1,
+      "grid": {},
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 14
+      },
+      "id": 14,
+      "isNew": true,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "received",
+          "dsType": "influxdb",
+          "expr": "",
+          "groupBy": [
+            {
+              "params": [
+                "$interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "intervalFactor": 2,
+          "measurement": "interface_rx",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              },
+              {
+                "params": [
+                  "1s"
+                ],
+                "type": "non_negative_derivative"
+              },
+              {
+                "params": [
+                  " *8"
+                ],
+                "type": "math"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$host$/"
+            },
+            {
+              "condition": "AND",
+              "key": "type",
+              "operator": "=",
+              "value": "if_octets"
+            }
+          ]
+        },
+        {
+          "alias": "sent",
+          "dsType": "influxdb",
+          "expr": "",
+          "groupBy": [
+            {
+              "params": [
+                "$interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "intervalFactor": 2,
+          "measurement": "interface_tx",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              },
+              {
+                "params": [
+                  "1s"
+                ],
+                "type": "non_negative_derivative"
+              },
+              {
+                "params": [
+                  "*8"
+                ],
+                "type": "math"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$host$/"
+            },
+            {
+              "condition": "AND",
+              "key": "type",
+              "operator": "=",
+              "value": "if_octets"
+            }
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Network Traffic",
+      "tooltip": {
+        "msResolution": true,
+        "shared": true,
+        "sort": 0,
+        "value_type": "cumulative"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "bps",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -721,12 +1321,59 @@
   "refresh": false,
   "schemaVersion": 16,
   "style": "dark",
-  "tags": [],
+  "tags": [
+    "system",
+    "os"
+  ],
   "templating": {
-    "list": []
+    "list": [
+      {
+        "current": {
+          "text": "module7",
+          "value": "module7"
+        },
+        "datasource": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": "",
+        "multi": false,
+        "name": "datasource",
+        "options": [],
+        "query": "influxdb",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "type": "datasource"
+      },
+      {
+        "allValue": null,
+        "current": {
+          "text": "collectd-itself",
+          "value": "collectd-itself"
+        },
+        "datasource": "module7",
+        "definition": "",
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "host",
+        "options": [],
+        "query": "SHOW TAG VALUES WITH KEY=host",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      }
+    ]
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-5m",
     "to": "now"
   },
   "timepicker": {
@@ -754,8 +1401,8 @@
       "30d"
     ]
   },
-  "timezone": "",
-  "title": "test",
-  "uid": "0qWDvEjik",
+  "timezone": "browser",
+  "title": "Host Overview",
+  "uid": "fym2o3Cik",
   "version": 1
 }
