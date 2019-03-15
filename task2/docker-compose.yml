@@ -24,7 +24,8 @@ services:
     container_name: kibana
     ports:
       - 5601:5601
-      
+    command: bash -c "sleep 30; /usr/share/kibana/bin/../node/bin/node --no-warnings --max-http-header-size=65536 /usr/share/kibana/bin/../src/cli --cpu.cgroup.path.override=/ --cpuacct.cgroup.path.override=/" 
+
   filebeat:
     build:
       context: ./filebeat
