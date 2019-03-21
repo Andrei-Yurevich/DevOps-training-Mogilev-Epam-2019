@@ -34,7 +34,7 @@ end
 
 # create docker template
 template '/etc/docker/deamon.json' do
-
 source 'deamon.json.erb'
+notifies :restart, 'service[docker]', :delayed
 
 end

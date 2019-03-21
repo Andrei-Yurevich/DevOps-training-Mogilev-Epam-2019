@@ -23,3 +23,9 @@ end
 describe package('docker-ce') do
   it { should be_installed }
 end
+
+describe file('/etc/docker/deamon.json') do
+  it { should exist }
+  its('content') { should match(/insecure-registries/) }
+end
+
