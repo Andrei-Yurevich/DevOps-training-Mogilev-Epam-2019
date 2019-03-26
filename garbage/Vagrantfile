@@ -1,0 +1,31 @@
+Vagrant.configure("2") do |config|
+  
+  config.vm.define "cheef_server" do |cheef_server|
+    cheef_server.vm.network "forwarded_port", guest: 443, host: 1443
+    cheef_server.vm.box = "bento/ubuntu-14.04"
+    cheef_server.vm.network :private_network, ip: "10.0.0.254"
+    cheef_server.vm.hostname = "cheef.server"
+    cheef_server.vm.provision "shell", path: "cheef_server.sh"
+    cheef_server.vm.provider :virtualbox do |vb|
+       vb.customize ['modifyvm', :id,'--memory', '3072']
+    end
+
+  end
+
+
+  #config.vm.define "cheefdk" do |cheefdk|
+  #  cheefdk.vm.box = "bento/ubuntu-14.04"
+  #  cheefdk.vm.network :private_network, ip: "10.0.0.10"
+  #  cheefdk.vm.hostname = "cheefdk"
+  #  cheefdk.vm.provision "shell", path: "cheefdk.sh"
+  #end
+ 
+  config.vm.define "node1" do |node1|
+    node1.vm.box = "bento/ubuntu-14.04"
+    node1.vm.network :private_network, ip: "10.0.0.11"
+    node1.vm.hostname = "node1"
+    node1.vm.provision "shell", path: "node1.sh"
+
+  end
+
+end
