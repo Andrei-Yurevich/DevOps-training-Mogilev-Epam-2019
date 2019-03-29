@@ -277,9 +277,9 @@
     },
     "memory": {
       "swap": {
-        "cached": "29912kB",
+        "cached": "16768kB",
         "total": "2097148kB",
-        "free": "1625084kB"
+        "free": "1485564kB"
       },
       "hugepages": {
         "total": "0",
@@ -288,24 +288,24 @@
         "surplus": "0"
       },
       "total": "1882296kB",
-      "free": "126608kB",
-      "available": "552436kB",
-      "buffers": "36kB",
-      "cached": "552408kB",
-      "active": "873844kB",
-      "inactive": "731772kB",
-      "dirty": "2728kB",
+      "free": "192520kB",
+      "available": "635284kB",
+      "buffers": "1036kB",
+      "cached": "552756kB",
+      "active": "769308kB",
+      "inactive": "703812kB",
+      "dirty": "56kB",
       "writeback": "0kB",
-      "anon_pages": "1025068kB",
-      "mapped": "81760kB",
-      "slab": "89912kB",
-      "slab_reclaimable": "52740kB",
-      "slab_unreclaim": "37172kB",
-      "page_tables": "21412kB",
+      "anon_pages": "909356kB",
+      "mapped": "81940kB",
+      "slab": "148052kB",
+      "slab_reclaimable": "84376kB",
+      "slab_unreclaim": "63676kB",
+      "page_tables": "20652kB",
       "nfs_unstable": "0kB",
       "bounce": "0kB",
       "commit_limit": "3038296kB",
-      "committed_as": "3065700kB",
+      "committed_as": "3098052kB",
       "vmalloc_total": "34359738367kB",
       "vmalloc_used": "7712kB",
       "vmalloc_chunk": "34359728252kB",
@@ -582,9 +582,9 @@
 
           }
         },
-        "veth993950b": {
-          "type": "veth99395",
-          "number": "0b",
+        "veth706d0fc": {
+          "type": "veth706d",
+          "number": "0fc",
           "mtu": "1500",
           "flags": [
             "BROADCAST",
@@ -594,10 +594,10 @@
           ],
           "encapsulation": "Ethernet",
           "addresses": {
-            "FE:10:84:3B:7F:DA": {
+            "3E:83:73:EF:A0:BB": {
               "family": "lladdr"
             },
-            "fe80::fc10:84ff:fe3b:7fda": {
+            "fe80::3c83:73ff:feef:a0bb": {
               "family": "inet6",
               "prefixlen": "64",
               "scope": "Link",
@@ -635,16 +635,16 @@
           "lo": {
             "tx": {
               "queuelen": "1000",
-              "bytes": "10125421",
-              "packets": "87134",
+              "bytes": "28682195",
+              "packets": "249369",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
               "collisions": "0"
             },
             "rx": {
-              "bytes": "10125421",
-              "packets": "87134",
+              "bytes": "28682195",
+              "packets": "249369",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
@@ -653,16 +653,16 @@
           "eth0": {
             "tx": {
               "queuelen": "1000",
-              "bytes": "1897682",
-              "packets": "25112",
+              "bytes": "4905849",
+              "packets": "70085",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
               "collisions": "0"
             },
             "rx": {
-              "bytes": "140798196",
-              "packets": "113610",
+              "bytes": "346813106",
+              "packets": "283346",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
@@ -688,32 +688,32 @@
           },
           "docker0": {
             "rx": {
-              "bytes": "2367",
-              "packets": "25",
+              "bytes": "5349",
+              "packets": "58",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
             },
             "tx": {
-              "bytes": "3338",
-              "packets": "43",
+              "bytes": "6518",
+              "packets": "85",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
               "collisions": "0"
             }
           },
-          "veth993950b": {
+          "veth706d0fc": {
             "rx": {
-              "bytes": "541",
-              "packets": "5",
+              "bytes": "0",
+              "packets": "0",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
             },
             "tx": {
-              "bytes": "1186",
-              "packets": "15",
+              "bytes": "772",
+              "packets": "10",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
@@ -734,10 +734,10 @@
     "platform": "centos",
     "platform_version": "7.6.1810",
     "platform_family": "rhel",
-    "uptime_seconds": 1815,
-    "uptime": "30 minutes 15 seconds",
-    "idletime_seconds": 1508,
-    "idletime": "25 minutes 08 seconds",
+    "uptime_seconds": 5229,
+    "uptime": "1 hours 27 minutes 09 seconds",
+    "idletime_seconds": 4459,
+    "idletime": "1 hours 14 minutes 19 seconds",
     "virtualization": {
       "systems": {
         "docker": "host",
@@ -1517,12 +1517,12 @@
       "by_device": {
         "/dev/sda1": {
           "kb_size": "41921540",
-          "kb_used": "8055428",
-          "kb_available": "33866112",
+          "kb_used": "8059760",
+          "kb_available": "33861780",
           "percent_used": "20%",
           "total_inodes": "20971008",
-          "inodes_used": "254205",
-          "inodes_available": "20716803",
+          "inodes_used": "254405",
+          "inodes_available": "20716603",
           "inodes_percent_used": "2%",
           "fs_type": "xfs",
           "mount_options": [
@@ -1590,24 +1590,24 @@
         },
         "overlay": {
           "kb_size": "41921540",
-          "kb_used": "8055428",
-          "kb_available": "33866112",
+          "kb_used": "8059760",
+          "kb_available": "33861780",
           "percent_used": "20%",
           "total_inodes": "20971008",
-          "inodes_used": "254205",
-          "inodes_available": "20716803",
+          "inodes_used": "254405",
+          "inodes_available": "20716603",
           "inodes_percent_used": "2%",
           "fs_type": "overlay",
           "mount_options": [
             "rw",
             "relatime",
             "seclabel",
-            "lowerdir=/var/lib/docker/overlay2/l/34PGHSJRKBSKGCEAW5WQSWRGBE:/var/lib/docker/overlay2/l/EMVBYA3CX5TQSGV4DUFW4X2OEK:/var/lib/docker/overlay2/l/BGJMNBYINDR54QOYEPQQQAZWBG:/var/lib/docker/overlay2/l/SCZLJWP6SZFD4BUA5QJ7UI2PL5:/var/lib/docker/overlay2/l/RFFUT67ZP2ASHWHQW2JTHS7X7I:/var/lib/docker/overlay2/l/WANEJFOZGDYKBGNSW7RO3D2EHW:/var/lib/docker/overlay2/l/WVLBYKBN4H2BUOLRFSA3JGPRUL:/var/lib/docker/overlay2/l/XPWTMWQ2VJH7AFMQ5BKARQYGJW:/var/lib/docker/overlay2/l/NUGW2ZS4AGBJSO4TR4SEWWVKNE:/var/lib/docker/overlay2/l/VAR727MPBGUPNFNWNCJKQMLZUY:/var/lib/docker/overlay2/l/7ZT6L5E3HQ6N6D4YLKWNALC2KA:/var/lib/docker/overlay2/l/FDCCVH7ESTBXLE43XJ3J7LUNWD",
-            "upperdir=/var/lib/docker/overlay2/cb52b06c29a302da2364e5f2981a86150d68968a5700cdfc24b2b019e858bd39/diff",
-            "workdir=/var/lib/docker/overlay2/cb52b06c29a302da2364e5f2981a86150d68968a5700cdfc24b2b019e858bd39/work"
+            "lowerdir=/var/lib/docker/overlay2/l/XOG6I6CYFY2W2S37HABMH5ZNZC:/var/lib/docker/overlay2/l/LWVILTJR5JBTUFWYZX24KD5SNA:/var/lib/docker/overlay2/l/5E3AC47YW6BKTFDQT6Y3V7HQEE:/var/lib/docker/overlay2/l/AT3T4ZMKSJBATYVIGM4242M6UH:/var/lib/docker/overlay2/l/CVKJ3KUX3NFRXNEMSODCJAZXVK:/var/lib/docker/overlay2/l/IFSKIUJNDTBNQTGD2M4MFW2H6C:/var/lib/docker/overlay2/l/FLK4VRGTDTL2W4AFIMQZ4PQQAH:/var/lib/docker/overlay2/l/6MGR6NLVNAAE674TQJH7C3R7WG:/var/lib/docker/overlay2/l/S4M6SRW7FNSQMGSSJGR3P3QHXU:/var/lib/docker/overlay2/l/DK7EJCTGMRNLEW4XBR6TEQMECY:/var/lib/docker/overlay2/l/MU3FCXSP5F3UOGLXXAFNEMNHKE:/var/lib/docker/overlay2/l/CMGNNHXJOEESHGJA43WFNATIGZ",
+            "upperdir=/var/lib/docker/overlay2/68ff879af038d9775834136d3bfd01da967de1ae9aa86dcfa96563ebc4e3d82e/diff",
+            "workdir=/var/lib/docker/overlay2/68ff879af038d9775834136d3bfd01da967de1ae9aa86dcfa96563ebc4e3d82e/work"
           ],
           "mounts": [
-            "/var/lib/docker/overlay2/cb52b06c29a302da2364e5f2981a86150d68968a5700cdfc24b2b019e858bd39/merged"
+            "/var/lib/docker/overlay2/68ff879af038d9775834136d3bfd01da967de1ae9aa86dcfa96563ebc4e3d82e/merged"
           ]
         },
         "shm": {
@@ -1630,7 +1630,7 @@
             "size=65536k"
           ],
           "mounts": [
-            "/var/lib/docker/containers/661ab3c5c4b2554b50c2ceb1d2bc61b6ec84d6fe3325719f43335f29c2a6cf9f/mounts/shm"
+            "/var/lib/docker/containers/9135909d10c72f8adf9758972cebbcf7baa6f2a875e95e3e7c3485c9947391db/mounts/shm"
           ]
         },
         "sysfs": {
@@ -1659,7 +1659,7 @@
           "mounts": [
             "/proc",
             "/run/docker/netns/default",
-            "/run/docker/netns/61bef63b42d9"
+            "/run/docker/netns/f0a9b9084528"
           ]
         },
         "securityfs": {
@@ -1826,12 +1826,12 @@
       "by_mountpoint": {
         "/": {
           "kb_size": "41921540",
-          "kb_used": "8055428",
-          "kb_available": "33866112",
+          "kb_used": "8059760",
+          "kb_available": "33861780",
           "percent_used": "20%",
           "total_inodes": "20971008",
-          "inodes_used": "254205",
-          "inodes_available": "20716803",
+          "inodes_used": "254405",
+          "inodes_available": "20716603",
           "inodes_percent_used": "2%",
           "fs_type": "rootfs",
           "mount_options": [
@@ -1887,12 +1887,12 @@
         },
         "/run": {
           "kb_size": "941148",
-          "kb_used": "8784",
-          "kb_available": "932364",
+          "kb_used": "8748",
+          "kb_available": "932400",
           "percent_used": "1%",
           "total_inodes": "235287",
-          "inodes_used": "430",
-          "inodes_available": "234857",
+          "inodes_used": "418",
+          "inodes_available": "234869",
           "inodes_percent_used": "1%",
           "fs_type": "tmpfs",
           "mount_options": [
@@ -1953,29 +1953,29 @@
             "tmpfs"
           ]
         },
-        "/var/lib/docker/overlay2/cb52b06c29a302da2364e5f2981a86150d68968a5700cdfc24b2b019e858bd39/merged": {
+        "/var/lib/docker/overlay2/68ff879af038d9775834136d3bfd01da967de1ae9aa86dcfa96563ebc4e3d82e/merged": {
           "kb_size": "41921540",
-          "kb_used": "8055428",
-          "kb_available": "33866112",
+          "kb_used": "8059760",
+          "kb_available": "33861780",
           "percent_used": "20%",
           "total_inodes": "20971008",
-          "inodes_used": "254205",
-          "inodes_available": "20716803",
+          "inodes_used": "254405",
+          "inodes_available": "20716603",
           "inodes_percent_used": "2%",
           "fs_type": "overlay",
           "mount_options": [
             "rw",
             "relatime",
             "seclabel",
-            "lowerdir=/var/lib/docker/overlay2/l/34PGHSJRKBSKGCEAW5WQSWRGBE:/var/lib/docker/overlay2/l/EMVBYA3CX5TQSGV4DUFW4X2OEK:/var/lib/docker/overlay2/l/BGJMNBYINDR54QOYEPQQQAZWBG:/var/lib/docker/overlay2/l/SCZLJWP6SZFD4BUA5QJ7UI2PL5:/var/lib/docker/overlay2/l/RFFUT67ZP2ASHWHQW2JTHS7X7I:/var/lib/docker/overlay2/l/WANEJFOZGDYKBGNSW7RO3D2EHW:/var/lib/docker/overlay2/l/WVLBYKBN4H2BUOLRFSA3JGPRUL:/var/lib/docker/overlay2/l/XPWTMWQ2VJH7AFMQ5BKARQYGJW:/var/lib/docker/overlay2/l/NUGW2ZS4AGBJSO4TR4SEWWVKNE:/var/lib/docker/overlay2/l/VAR727MPBGUPNFNWNCJKQMLZUY:/var/lib/docker/overlay2/l/7ZT6L5E3HQ6N6D4YLKWNALC2KA:/var/lib/docker/overlay2/l/FDCCVH7ESTBXLE43XJ3J7LUNWD",
-            "upperdir=/var/lib/docker/overlay2/cb52b06c29a302da2364e5f2981a86150d68968a5700cdfc24b2b019e858bd39/diff",
-            "workdir=/var/lib/docker/overlay2/cb52b06c29a302da2364e5f2981a86150d68968a5700cdfc24b2b019e858bd39/work"
+            "lowerdir=/var/lib/docker/overlay2/l/XOG6I6CYFY2W2S37HABMH5ZNZC:/var/lib/docker/overlay2/l/LWVILTJR5JBTUFWYZX24KD5SNA:/var/lib/docker/overlay2/l/5E3AC47YW6BKTFDQT6Y3V7HQEE:/var/lib/docker/overlay2/l/AT3T4ZMKSJBATYVIGM4242M6UH:/var/lib/docker/overlay2/l/CVKJ3KUX3NFRXNEMSODCJAZXVK:/var/lib/docker/overlay2/l/IFSKIUJNDTBNQTGD2M4MFW2H6C:/var/lib/docker/overlay2/l/FLK4VRGTDTL2W4AFIMQZ4PQQAH:/var/lib/docker/overlay2/l/6MGR6NLVNAAE674TQJH7C3R7WG:/var/lib/docker/overlay2/l/S4M6SRW7FNSQMGSSJGR3P3QHXU:/var/lib/docker/overlay2/l/DK7EJCTGMRNLEW4XBR6TEQMECY:/var/lib/docker/overlay2/l/MU3FCXSP5F3UOGLXXAFNEMNHKE:/var/lib/docker/overlay2/l/CMGNNHXJOEESHGJA43WFNATIGZ",
+            "upperdir=/var/lib/docker/overlay2/68ff879af038d9775834136d3bfd01da967de1ae9aa86dcfa96563ebc4e3d82e/diff",
+            "workdir=/var/lib/docker/overlay2/68ff879af038d9775834136d3bfd01da967de1ae9aa86dcfa96563ebc4e3d82e/work"
           ],
           "devices": [
             "overlay"
           ]
         },
-        "/var/lib/docker/containers/661ab3c5c4b2554b50c2ceb1d2bc61b6ec84d6fe3325719f43335f29c2a6cf9f/mounts/shm": {
+        "/var/lib/docker/containers/9135909d10c72f8adf9758972cebbcf7baa6f2a875e95e3e7c3485c9947391db/mounts/shm": {
           "kb_size": "65536",
           "kb_used": "0",
           "kb_available": "65536",
@@ -2328,7 +2328,7 @@
             "proc"
           ]
         },
-        "/run/docker/netns/61bef63b42d9": {
+        "/run/docker/netns/f0a9b9084528": {
           "fs_type": "proc",
           "mount_options": [
             "rw",
@@ -2346,13 +2346,13 @@
         "/dev/sda1,/": {
           "device": "/dev/sda1",
           "kb_size": "41921540",
-          "kb_used": "8055428",
-          "kb_available": "33866112",
+          "kb_used": "8059760",
+          "kb_available": "33861780",
           "percent_used": "20%",
           "mount": "/",
           "total_inodes": "20971008",
-          "inodes_used": "254205",
-          "inodes_available": "20716803",
+          "inodes_used": "254405",
+          "inodes_available": "20716603",
           "inodes_percent_used": "2%",
           "fs_type": "xfs",
           "mount_options": [
@@ -2408,13 +2408,13 @@
         "tmpfs,/run": {
           "device": "tmpfs",
           "kb_size": "941148",
-          "kb_used": "8784",
-          "kb_available": "932364",
+          "kb_used": "8748",
+          "kb_available": "932400",
           "percent_used": "1%",
           "mount": "/run",
           "total_inodes": "235287",
-          "inodes_used": "430",
-          "inodes_available": "234857",
+          "inodes_used": "418",
+          "inodes_available": "234869",
           "inodes_percent_used": "1%",
           "fs_type": "tmpfs",
           "mount_options": [
@@ -2470,34 +2470,34 @@
             "gid=1000"
           ]
         },
-        "overlay,/var/lib/docker/overlay2/cb52b06c29a302da2364e5f2981a86150d68968a5700cdfc24b2b019e858bd39/merged": {
+        "overlay,/var/lib/docker/overlay2/68ff879af038d9775834136d3bfd01da967de1ae9aa86dcfa96563ebc4e3d82e/merged": {
           "device": "overlay",
           "kb_size": "41921540",
-          "kb_used": "8055428",
-          "kb_available": "33866112",
+          "kb_used": "8059760",
+          "kb_available": "33861780",
           "percent_used": "20%",
-          "mount": "/var/lib/docker/overlay2/cb52b06c29a302da2364e5f2981a86150d68968a5700cdfc24b2b019e858bd39/merged",
+          "mount": "/var/lib/docker/overlay2/68ff879af038d9775834136d3bfd01da967de1ae9aa86dcfa96563ebc4e3d82e/merged",
           "total_inodes": "20971008",
-          "inodes_used": "254205",
-          "inodes_available": "20716803",
+          "inodes_used": "254405",
+          "inodes_available": "20716603",
           "inodes_percent_used": "2%",
           "fs_type": "overlay",
           "mount_options": [
             "rw",
             "relatime",
             "seclabel",
-            "lowerdir=/var/lib/docker/overlay2/l/34PGHSJRKBSKGCEAW5WQSWRGBE:/var/lib/docker/overlay2/l/EMVBYA3CX5TQSGV4DUFW4X2OEK:/var/lib/docker/overlay2/l/BGJMNBYINDR54QOYEPQQQAZWBG:/var/lib/docker/overlay2/l/SCZLJWP6SZFD4BUA5QJ7UI2PL5:/var/lib/docker/overlay2/l/RFFUT67ZP2ASHWHQW2JTHS7X7I:/var/lib/docker/overlay2/l/WANEJFOZGDYKBGNSW7RO3D2EHW:/var/lib/docker/overlay2/l/WVLBYKBN4H2BUOLRFSA3JGPRUL:/var/lib/docker/overlay2/l/XPWTMWQ2VJH7AFMQ5BKARQYGJW:/var/lib/docker/overlay2/l/NUGW2ZS4AGBJSO4TR4SEWWVKNE:/var/lib/docker/overlay2/l/VAR727MPBGUPNFNWNCJKQMLZUY:/var/lib/docker/overlay2/l/7ZT6L5E3HQ6N6D4YLKWNALC2KA:/var/lib/docker/overlay2/l/FDCCVH7ESTBXLE43XJ3J7LUNWD",
-            "upperdir=/var/lib/docker/overlay2/cb52b06c29a302da2364e5f2981a86150d68968a5700cdfc24b2b019e858bd39/diff",
-            "workdir=/var/lib/docker/overlay2/cb52b06c29a302da2364e5f2981a86150d68968a5700cdfc24b2b019e858bd39/work"
+            "lowerdir=/var/lib/docker/overlay2/l/XOG6I6CYFY2W2S37HABMH5ZNZC:/var/lib/docker/overlay2/l/LWVILTJR5JBTUFWYZX24KD5SNA:/var/lib/docker/overlay2/l/5E3AC47YW6BKTFDQT6Y3V7HQEE:/var/lib/docker/overlay2/l/AT3T4ZMKSJBATYVIGM4242M6UH:/var/lib/docker/overlay2/l/CVKJ3KUX3NFRXNEMSODCJAZXVK:/var/lib/docker/overlay2/l/IFSKIUJNDTBNQTGD2M4MFW2H6C:/var/lib/docker/overlay2/l/FLK4VRGTDTL2W4AFIMQZ4PQQAH:/var/lib/docker/overlay2/l/6MGR6NLVNAAE674TQJH7C3R7WG:/var/lib/docker/overlay2/l/S4M6SRW7FNSQMGSSJGR3P3QHXU:/var/lib/docker/overlay2/l/DK7EJCTGMRNLEW4XBR6TEQMECY:/var/lib/docker/overlay2/l/MU3FCXSP5F3UOGLXXAFNEMNHKE:/var/lib/docker/overlay2/l/CMGNNHXJOEESHGJA43WFNATIGZ",
+            "upperdir=/var/lib/docker/overlay2/68ff879af038d9775834136d3bfd01da967de1ae9aa86dcfa96563ebc4e3d82e/diff",
+            "workdir=/var/lib/docker/overlay2/68ff879af038d9775834136d3bfd01da967de1ae9aa86dcfa96563ebc4e3d82e/work"
           ]
         },
-        "shm,/var/lib/docker/containers/661ab3c5c4b2554b50c2ceb1d2bc61b6ec84d6fe3325719f43335f29c2a6cf9f/mounts/shm": {
+        "shm,/var/lib/docker/containers/9135909d10c72f8adf9758972cebbcf7baa6f2a875e95e3e7c3485c9947391db/mounts/shm": {
           "device": "shm",
           "kb_size": "65536",
           "kb_used": "0",
           "kb_available": "65536",
           "percent_used": "0%",
-          "mount": "/var/lib/docker/containers/661ab3c5c4b2554b50c2ceb1d2bc61b6ec84d6fe3325719f43335f29c2a6cf9f/mounts/shm",
+          "mount": "/var/lib/docker/containers/9135909d10c72f8adf9758972cebbcf7baa6f2a875e95e3e7c3485c9947391db/mounts/shm",
           "total_inodes": "235287",
           "inodes_used": "1",
           "inodes_available": "235286",
@@ -2819,9 +2819,9 @@
             "relatime"
           ]
         },
-        "proc,/run/docker/netns/61bef63b42d9": {
+        "proc,/run/docker/netns/f0a9b9084528": {
           "device": "proc",
-          "mount": "/run/docker/netns/61bef63b42d9",
+          "mount": "/run/docker/netns/f0a9b9084528",
           "fs_type": "proc",
           "mount_options": [
             "rw",
@@ -2930,7 +2930,7 @@
       "search-state-factory": "/usr/local/share/factory/var",
       "search-configuration": "/root/.config"
     },
-    "ohai_time": 1553846077.3125236,
+    "ohai_time": 1553849491.7318134,
     "packages": {
       "libfastjson": {
         "epoch": "0",
@@ -6142,7 +6142,7 @@
       "ULONG_MAX": 18446744073709551615,
       "USHRT_MAX": 65535,
       "WORD_BIT": 32,
-      "_AVPHYS_PAGES": 22494,
+      "_AVPHYS_PAGES": 45384,
       "_NPROCESSORS_CONF": 1,
       "_NPROCESSORS_ONLN": 1,
       "_PHYS_PAGES": 470574,

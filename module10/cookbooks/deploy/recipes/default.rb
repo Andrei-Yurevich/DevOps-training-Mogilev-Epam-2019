@@ -65,13 +65,21 @@ run_green = docker_container 'green' do
   command "bash -c 'cp /opt/task4.war /usr/local/tomcat/webapps/ && ./bin/catalina.sh run'"
 end
 
-execute 'remove blue' do
-  command 'docker stop blue ; docker rm blue'
+execute 'save image and remove blue container' do
+  command "curl --silent localhost:8080/task4/ |\
+           egrep '.*[0-9]+\.[0-9]+\.[0-9]+'    |\
+           sed 's/.*<p>//; s/<.*//'            |\
+           xargs -i docker commit blue blue:{} &&\
+           docker stop blue ; docker rm blue"
   only_if 'docker ps | grep blue' 
 end
 
 execute 'remove first_run' do
-  command 'docker stop first_run ; docker rm first_run'
+  command "curl --silent localhost:8080/task4/ |\
+           egrep '.*[0-9]+\.[0-9]+\.[0-9]+'    |\
+           sed 's/.*<p>//; s/<.*//'            |\
+           xargs -i docker commit first_run first_run:{} &&
+           docker stop first_run ; docker rm first_run"
   only_if 'docker ps | grep first_run'
 end
 
@@ -88,8 +96,13 @@ run_blue = docker_container 'blue' do
   command "bash -c 'cp /opt/task4.war /usr/local/tomcat/webapps/ && ./bin/catalina.sh run'"
 end
 
-execute 'remove green' do
-  command 'docker stop green ; docker rm green;'   
+execute ' save image and remove green container' do
+  command "curl --silent localhost:8081/task4/ |\
+           egrep '.*[0-9]+\.[0-9]+\.[0-9]+'    |\
+           sed 's/.*<p>//; s/<.*//'            |\
+           xargs -i docker commit green green:{} && \
+           docker stop green ; docker rm green;"
+
   only_if { run_blue.updated_by_last_action? }
 end
 
