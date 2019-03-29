@@ -1,0 +1,7 @@
+default['module10']['image'] = '192.168.43.12:5000/module4'
+default['module10']['tag'] = '1.0.13'
+default['module10']['repo'] = '192.168.43.12:5000/module4'
+default['module10']['port'] = '8080:8080'
+default['module10']['port_green'] = '8081:8080'
+default['module10']['file'] = '/etc/docker/deamon.json'
+default['module10']['content'] = '{ "insecure-registries" : [ "192.168.43.12:5000" ] }'
