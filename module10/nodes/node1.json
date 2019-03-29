@@ -127,12 +127,20 @@
           "size": "38199",
           "refcount": "0"
         },
+        "sunrpc": {
+          "size": "353407",
+          "refcount": "1"
+        },
+        "snd_ac97_codec": {
+          "size": "130556",
+          "refcount": "1"
+        },
         "aesni_intel": {
           "size": "189414",
           "refcount": "0"
         },
-        "sunrpc": {
-          "size": "353407",
+        "ac97_bus": {
+          "size": "12730",
           "refcount": "1"
         },
         "lrw": {
@@ -143,9 +151,9 @@
           "size": "15139",
           "refcount": "1"
         },
-        "snd_ac97_codec": {
-          "size": "130556",
-          "refcount": "1"
+        "snd_seq": {
+          "size": "62663",
+          "refcount": "0"
         },
         "glue_helper": {
           "size": "13990",
@@ -155,32 +163,20 @@
           "size": "13597",
           "refcount": "1"
         },
-        "ac97_bus": {
-          "size": "12730",
+        "snd_seq_device": {
+          "size": "14356",
           "refcount": "1"
         },
         "cryptd": {
           "size": "21190",
           "refcount": "3"
         },
-        "snd_seq": {
-          "size": "62663",
-          "refcount": "0"
-        },
-        "snd_seq_device": {
-          "size": "14356",
-          "refcount": "1"
-        },
-        "pcspkr": {
-          "size": "12718",
-          "refcount": "0"
-        },
         "snd_pcm": {
           "size": "105708",
           "refcount": "2"
         },
-        "i2c_piix4": {
-          "size": "22401",
+        "pcspkr": {
+          "size": "12718",
           "refcount": "0"
         },
         "sg": {
@@ -188,30 +184,34 @@
           "refcount": "0",
           "version": "3.5.36"
         },
-        "parport_pc": {
-          "size": "28205",
+        "i2c_piix4": {
+          "size": "22401",
           "refcount": "0"
         },
         "snd_timer": {
           "size": "29912",
           "refcount": "2"
         },
-        "video": {
-          "size": "24538",
-          "refcount": "0"
-        },
         "e1000": {
           "size": "137586",
           "refcount": "0",
           "version": "7.3.21-k8-NAPI"
         },
-        "parport": {
-          "size": "46395",
-          "refcount": "2"
-        },
         "snd": {
           "size": "83815",
           "refcount": "6"
+        },
+        "video": {
+          "size": "24538",
+          "refcount": "0"
+        },
+        "parport_pc": {
+          "size": "28205",
+          "refcount": "0"
+        },
+        "parport": {
+          "size": "46395",
+          "refcount": "2"
         },
         "soundcore": {
           "size": "15047",
@@ -277,9 +277,9 @@
     },
     "memory": {
       "swap": {
-        "cached": "26244kB",
+        "cached": "29912kB",
         "total": "2097148kB",
-        "free": "1519612kB"
+        "free": "1625084kB"
       },
       "hugepages": {
         "total": "0",
@@ -288,27 +288,27 @@
         "surplus": "0"
       },
       "total": "1882296kB",
-      "free": "186468kB",
-      "available": "585012kB",
-      "buffers": "1036kB",
-      "cached": "481064kB",
-      "active": "965528kB",
-      "inactive": "509188kB",
-      "dirty": "72kB",
+      "free": "126608kB",
+      "available": "552436kB",
+      "buffers": "36kB",
+      "cached": "552408kB",
+      "active": "873844kB",
+      "inactive": "731772kB",
+      "dirty": "2728kB",
       "writeback": "0kB",
-      "anon_pages": "974220kB",
-      "mapped": "96968kB",
-      "slab": "163308kB",
-      "slab_reclaimable": "126956kB",
-      "slab_unreclaim": "36352kB",
-      "page_tables": "19772kB",
+      "anon_pages": "1025068kB",
+      "mapped": "81760kB",
+      "slab": "89912kB",
+      "slab_reclaimable": "52740kB",
+      "slab_unreclaim": "37172kB",
+      "page_tables": "21412kB",
       "nfs_unstable": "0kB",
       "bounce": "0kB",
       "commit_limit": "3038296kB",
-      "committed_as": "3065852kB",
+      "committed_as": "3065700kB",
       "vmalloc_total": "34359738367kB",
       "vmalloc_used": "7712kB",
-      "vmalloc_chunk": "34359727996kB",
+      "vmalloc_chunk": "34359728252kB",
       "hugepage_size": "2048kB"
     },
     "network": {
@@ -419,8 +419,8 @@
           },
           "state": "up",
           "arp": {
-            "10.0.2.3": "52:54:00:12:35:03",
-            "10.0.2.2": "52:54:00:12:35:02"
+            "10.0.2.2": "52:54:00:12:35:02",
+            "10.0.2.3": "52:54:00:12:35:03"
           },
           "routes": [
             {
@@ -539,7 +539,7 @@
           ],
           "encapsulation": "Ethernet",
           "addresses": {
-            "02:42:17:DD:6B:58": {
+            "02:42:C3:76:A5:4D": {
               "family": "lladdr"
             },
             "172.17.0.1": {
@@ -549,7 +549,7 @@
               "broadcast": "172.17.255.255",
               "scope": "Global"
             },
-            "fe80::42:17ff:fedd:6b58": {
+            "fe80::42:c3ff:fe76:a54d": {
               "family": "inet6",
               "prefixlen": "64",
               "scope": "Link",
@@ -560,8 +560,8 @@
           },
           "state": "0",
           "arp": {
-            "172.17.0.3": "02:42:ac:11:00:03",
-            "172.17.0.2": "02:42:ac:11:00:02"
+            "172.17.0.2": "02:42:ac:11:00:02",
+            "172.17.0.3": "02:42:ac:11:00:03"
           },
           "routes": [
             {
@@ -582,9 +582,9 @@
 
           }
         },
-        "vethe83ee1c": {
-          "type": "vethe83ee",
-          "number": "1c",
+        "veth993950b": {
+          "type": "veth99395",
+          "number": "0b",
           "mtu": "1500",
           "flags": [
             "BROADCAST",
@@ -594,10 +594,10 @@
           ],
           "encapsulation": "Ethernet",
           "addresses": {
-            "96:64:BE:96:E2:8E": {
+            "FE:10:84:3B:7F:DA": {
               "family": "lladdr"
             },
-            "fe80::9464:beff:fe96:e28e": {
+            "fe80::fc10:84ff:fe3b:7fda": {
               "family": "inet6",
               "prefixlen": "64",
               "scope": "Link",
@@ -635,16 +635,16 @@
           "lo": {
             "tx": {
               "queuelen": "1000",
-              "bytes": "96045914",
-              "packets": "859019",
+              "bytes": "10125421",
+              "packets": "87134",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
               "collisions": "0"
             },
             "rx": {
-              "bytes": "96045914",
-              "packets": "859019",
+              "bytes": "10125421",
+              "packets": "87134",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
@@ -653,16 +653,16 @@
           "eth0": {
             "tx": {
               "queuelen": "1000",
-              "bytes": "17542807",
-              "packets": "271721",
+              "bytes": "1897682",
+              "packets": "25112",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
               "collisions": "0"
             },
             "rx": {
-              "bytes": "1252493035",
-              "packets": "976113",
+              "bytes": "140798196",
+              "packets": "113610",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
@@ -688,22 +688,22 @@
           },
           "docker0": {
             "rx": {
-              "bytes": "19736",
-              "packets": "98",
+              "bytes": "2367",
+              "packets": "25",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
             },
             "tx": {
-              "bytes": "10700",
-              "packets": "142",
+              "bytes": "3338",
+              "packets": "43",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
               "collisions": "0"
             }
           },
-          "vethe83ee1c": {
+          "veth993950b": {
             "rx": {
               "bytes": "541",
               "packets": "5",
@@ -725,7 +725,7 @@
     },
     "ipaddress": "10.0.2.15",
     "macaddress": "52:54:00:F0:E9:5B",
-    "ip6address": "fe80::42:17ff:fedd:6b58",
+    "ip6address": "fe80::42:c3ff:fe76:a54d",
     "lsb": {
 
     },
@@ -734,10 +734,10 @@
     "platform": "centos",
     "platform_version": "7.6.1810",
     "platform_family": "rhel",
-    "uptime_seconds": 18040,
-    "uptime": "5 hours 00 minutes 40 seconds",
-    "idletime_seconds": 16149,
-    "idletime": "4 hours 29 minutes 09 seconds",
+    "uptime_seconds": 1815,
+    "uptime": "30 minutes 15 seconds",
+    "idletime_seconds": 1508,
+    "idletime": "25 minutes 08 seconds",
     "virtualization": {
       "systems": {
         "docker": "host",
@@ -788,9 +788,6 @@
         "version": "14.8.10",
         "ohai_root": "/opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/ohai-14.8.10/lib/ohai"
       }
-    },
-    "gce": {
-
     },
     "dmi": {
       "dmidecode_version": "3.1",
@@ -1380,6 +1377,7 @@
       }
     },
     "current_user": "root",
+    "cloud": null,
     "command": {
       "ps": "ps -ef"
     },
@@ -1519,12 +1517,12 @@
       "by_device": {
         "/dev/sda1": {
           "kb_size": "41921540",
-          "kb_used": "8033564",
-          "kb_available": "33887976",
+          "kb_used": "8055428",
+          "kb_available": "33866112",
           "percent_used": "20%",
           "total_inodes": "20971008",
-          "inodes_used": "253906",
-          "inodes_available": "20717102",
+          "inodes_used": "254205",
+          "inodes_available": "20716803",
           "inodes_percent_used": "2%",
           "fs_type": "xfs",
           "mount_options": [
@@ -1592,24 +1590,24 @@
         },
         "overlay": {
           "kb_size": "41921540",
-          "kb_used": "8033564",
-          "kb_available": "33887976",
+          "kb_used": "8055428",
+          "kb_available": "33866112",
           "percent_used": "20%",
           "total_inodes": "20971008",
-          "inodes_used": "253906",
-          "inodes_available": "20717102",
+          "inodes_used": "254205",
+          "inodes_available": "20716803",
           "inodes_percent_used": "2%",
           "fs_type": "overlay",
           "mount_options": [
             "rw",
             "relatime",
             "seclabel",
-            "lowerdir=/var/lib/docker/overlay2/l/KQKGZYIX3JY5VV2JSBNH3RI4OU:/var/lib/docker/overlay2/l/EMVBYA3CX5TQSGV4DUFW4X2OEK:/var/lib/docker/overlay2/l/BGJMNBYINDR54QOYEPQQQAZWBG:/var/lib/docker/overlay2/l/SCZLJWP6SZFD4BUA5QJ7UI2PL5:/var/lib/docker/overlay2/l/RFFUT67ZP2ASHWHQW2JTHS7X7I:/var/lib/docker/overlay2/l/WANEJFOZGDYKBGNSW7RO3D2EHW:/var/lib/docker/overlay2/l/WVLBYKBN4H2BUOLRFSA3JGPRUL:/var/lib/docker/overlay2/l/XPWTMWQ2VJH7AFMQ5BKARQYGJW:/var/lib/docker/overlay2/l/NUGW2ZS4AGBJSO4TR4SEWWVKNE:/var/lib/docker/overlay2/l/VAR727MPBGUPNFNWNCJKQMLZUY:/var/lib/docker/overlay2/l/7ZT6L5E3HQ6N6D4YLKWNALC2KA:/var/lib/docker/overlay2/l/FDCCVH7ESTBXLE43XJ3J7LUNWD",
-            "upperdir=/var/lib/docker/overlay2/1df133cd988946849dca651a6a324f45a6726b1725908b07a23932adcb00094d/diff",
-            "workdir=/var/lib/docker/overlay2/1df133cd988946849dca651a6a324f45a6726b1725908b07a23932adcb00094d/work"
+            "lowerdir=/var/lib/docker/overlay2/l/34PGHSJRKBSKGCEAW5WQSWRGBE:/var/lib/docker/overlay2/l/EMVBYA3CX5TQSGV4DUFW4X2OEK:/var/lib/docker/overlay2/l/BGJMNBYINDR54QOYEPQQQAZWBG:/var/lib/docker/overlay2/l/SCZLJWP6SZFD4BUA5QJ7UI2PL5:/var/lib/docker/overlay2/l/RFFUT67ZP2ASHWHQW2JTHS7X7I:/var/lib/docker/overlay2/l/WANEJFOZGDYKBGNSW7RO3D2EHW:/var/lib/docker/overlay2/l/WVLBYKBN4H2BUOLRFSA3JGPRUL:/var/lib/docker/overlay2/l/XPWTMWQ2VJH7AFMQ5BKARQYGJW:/var/lib/docker/overlay2/l/NUGW2ZS4AGBJSO4TR4SEWWVKNE:/var/lib/docker/overlay2/l/VAR727MPBGUPNFNWNCJKQMLZUY:/var/lib/docker/overlay2/l/7ZT6L5E3HQ6N6D4YLKWNALC2KA:/var/lib/docker/overlay2/l/FDCCVH7ESTBXLE43XJ3J7LUNWD",
+            "upperdir=/var/lib/docker/overlay2/cb52b06c29a302da2364e5f2981a86150d68968a5700cdfc24b2b019e858bd39/diff",
+            "workdir=/var/lib/docker/overlay2/cb52b06c29a302da2364e5f2981a86150d68968a5700cdfc24b2b019e858bd39/work"
           ],
           "mounts": [
-            "/var/lib/docker/overlay2/1df133cd988946849dca651a6a324f45a6726b1725908b07a23932adcb00094d/merged"
+            "/var/lib/docker/overlay2/cb52b06c29a302da2364e5f2981a86150d68968a5700cdfc24b2b019e858bd39/merged"
           ]
         },
         "shm": {
@@ -1632,7 +1630,7 @@
             "size=65536k"
           ],
           "mounts": [
-            "/var/lib/docker/containers/d4a6272931a8a0c0cb382b5ca74b425508d3269883af6f1941ae1e2f9ad20a82/mounts/shm"
+            "/var/lib/docker/containers/661ab3c5c4b2554b50c2ceb1d2bc61b6ec84d6fe3325719f43335f29c2a6cf9f/mounts/shm"
           ]
         },
         "sysfs": {
@@ -1661,7 +1659,7 @@
           "mounts": [
             "/proc",
             "/run/docker/netns/default",
-            "/run/docker/netns/adcabf3cdbd7"
+            "/run/docker/netns/61bef63b42d9"
           ]
         },
         "securityfs": {
@@ -1702,20 +1700,20 @@
             "noexec",
             "relatime",
             "seclabel",
-            "cpuset"
+            "perf_event"
           ],
           "mounts": [
             "/sys/fs/cgroup/systemd",
-            "/sys/fs/cgroup/freezer",
-            "/sys/fs/cgroup/devices",
-            "/sys/fs/cgroup/perf_event",
-            "/sys/fs/cgroup/pids",
-            "/sys/fs/cgroup/cpu,cpuacct",
             "/sys/fs/cgroup/net_cls,net_prio",
-            "/sys/fs/cgroup/blkio",
             "/sys/fs/cgroup/memory",
+            "/sys/fs/cgroup/pids",
+            "/sys/fs/cgroup/devices",
+            "/sys/fs/cgroup/blkio",
             "/sys/fs/cgroup/hugetlb",
-            "/sys/fs/cgroup/cpuset"
+            "/sys/fs/cgroup/cpu,cpuacct",
+            "/sys/fs/cgroup/cpuset",
+            "/sys/fs/cgroup/freezer",
+            "/sys/fs/cgroup/perf_event"
           ]
         },
         "pstore": {
@@ -1756,13 +1754,13 @@
           "mount_options": [
             "rw",
             "relatime",
-            "fd=27",
+            "fd=32",
             "pgrp=1",
             "timeout=0",
             "minproto=5",
             "maxproto=5",
             "direct",
-            "pipe_ino=14150"
+            "pipe_ino=14497"
           ],
           "mounts": [
             "/proc/sys/fs/binfmt_misc"
@@ -1779,6 +1777,16 @@
             "/dev/mqueue"
           ]
         },
+        "debugfs": {
+          "fs_type": "debugfs",
+          "mount_options": [
+            "rw",
+            "relatime"
+          ],
+          "mounts": [
+            "/sys/kernel/debug"
+          ]
+        },
         "hugetlbfs": {
           "fs_type": "hugetlbfs",
           "mount_options": [
@@ -1788,16 +1796,6 @@
           ],
           "mounts": [
             "/dev/hugepages"
-          ]
-        },
-        "debugfs": {
-          "fs_type": "debugfs",
-          "mount_options": [
-            "rw",
-            "relatime"
-          ],
-          "mounts": [
-            "/sys/kernel/debug"
           ]
         },
         "sunrpc": {
@@ -1828,12 +1826,12 @@
       "by_mountpoint": {
         "/": {
           "kb_size": "41921540",
-          "kb_used": "8033564",
-          "kb_available": "33887976",
+          "kb_used": "8055428",
+          "kb_available": "33866112",
           "percent_used": "20%",
           "total_inodes": "20971008",
-          "inodes_used": "253906",
-          "inodes_available": "20717102",
+          "inodes_used": "254205",
+          "inodes_available": "20716803",
           "inodes_percent_used": "2%",
           "fs_type": "rootfs",
           "mount_options": [
@@ -1889,12 +1887,12 @@
         },
         "/run": {
           "kb_size": "941148",
-          "kb_used": "8748",
-          "kb_available": "932400",
+          "kb_used": "8784",
+          "kb_available": "932364",
           "percent_used": "1%",
           "total_inodes": "235287",
-          "inodes_used": "418",
-          "inodes_available": "234869",
+          "inodes_used": "430",
+          "inodes_available": "234857",
           "inodes_percent_used": "1%",
           "fs_type": "tmpfs",
           "mount_options": [
@@ -1955,29 +1953,29 @@
             "tmpfs"
           ]
         },
-        "/var/lib/docker/overlay2/1df133cd988946849dca651a6a324f45a6726b1725908b07a23932adcb00094d/merged": {
+        "/var/lib/docker/overlay2/cb52b06c29a302da2364e5f2981a86150d68968a5700cdfc24b2b019e858bd39/merged": {
           "kb_size": "41921540",
-          "kb_used": "8033564",
-          "kb_available": "33887976",
+          "kb_used": "8055428",
+          "kb_available": "33866112",
           "percent_used": "20%",
           "total_inodes": "20971008",
-          "inodes_used": "253906",
-          "inodes_available": "20717102",
+          "inodes_used": "254205",
+          "inodes_available": "20716803",
           "inodes_percent_used": "2%",
           "fs_type": "overlay",
           "mount_options": [
             "rw",
             "relatime",
             "seclabel",
-            "lowerdir=/var/lib/docker/overlay2/l/KQKGZYIX3JY5VV2JSBNH3RI4OU:/var/lib/docker/overlay2/l/EMVBYA3CX5TQSGV4DUFW4X2OEK:/var/lib/docker/overlay2/l/BGJMNBYINDR54QOYEPQQQAZWBG:/var/lib/docker/overlay2/l/SCZLJWP6SZFD4BUA5QJ7UI2PL5:/var/lib/docker/overlay2/l/RFFUT67ZP2ASHWHQW2JTHS7X7I:/var/lib/docker/overlay2/l/WANEJFOZGDYKBGNSW7RO3D2EHW:/var/lib/docker/overlay2/l/WVLBYKBN4H2BUOLRFSA3JGPRUL:/var/lib/docker/overlay2/l/XPWTMWQ2VJH7AFMQ5BKARQYGJW:/var/lib/docker/overlay2/l/NUGW2ZS4AGBJSO4TR4SEWWVKNE:/var/lib/docker/overlay2/l/VAR727MPBGUPNFNWNCJKQMLZUY:/var/lib/docker/overlay2/l/7ZT6L5E3HQ6N6D4YLKWNALC2KA:/var/lib/docker/overlay2/l/FDCCVH7ESTBXLE43XJ3J7LUNWD",
-            "upperdir=/var/lib/docker/overlay2/1df133cd988946849dca651a6a324f45a6726b1725908b07a23932adcb00094d/diff",
-            "workdir=/var/lib/docker/overlay2/1df133cd988946849dca651a6a324f45a6726b1725908b07a23932adcb00094d/work"
+            "lowerdir=/var/lib/docker/overlay2/l/34PGHSJRKBSKGCEAW5WQSWRGBE:/var/lib/docker/overlay2/l/EMVBYA3CX5TQSGV4DUFW4X2OEK:/var/lib/docker/overlay2/l/BGJMNBYINDR54QOYEPQQQAZWBG:/var/lib/docker/overlay2/l/SCZLJWP6SZFD4BUA5QJ7UI2PL5:/var/lib/docker/overlay2/l/RFFUT67ZP2ASHWHQW2JTHS7X7I:/var/lib/docker/overlay2/l/WANEJFOZGDYKBGNSW7RO3D2EHW:/var/lib/docker/overlay2/l/WVLBYKBN4H2BUOLRFSA3JGPRUL:/var/lib/docker/overlay2/l/XPWTMWQ2VJH7AFMQ5BKARQYGJW:/var/lib/docker/overlay2/l/NUGW2ZS4AGBJSO4TR4SEWWVKNE:/var/lib/docker/overlay2/l/VAR727MPBGUPNFNWNCJKQMLZUY:/var/lib/docker/overlay2/l/7ZT6L5E3HQ6N6D4YLKWNALC2KA:/var/lib/docker/overlay2/l/FDCCVH7ESTBXLE43XJ3J7LUNWD",
+            "upperdir=/var/lib/docker/overlay2/cb52b06c29a302da2364e5f2981a86150d68968a5700cdfc24b2b019e858bd39/diff",
+            "workdir=/var/lib/docker/overlay2/cb52b06c29a302da2364e5f2981a86150d68968a5700cdfc24b2b019e858bd39/work"
           ],
           "devices": [
             "overlay"
           ]
         },
-        "/var/lib/docker/containers/d4a6272931a8a0c0cb382b5ca74b425508d3269883af6f1941ae1e2f9ad20a82/mounts/shm": {
+        "/var/lib/docker/containers/661ab3c5c4b2554b50c2ceb1d2bc61b6ec84d6fe3325719f43335f29c2a6cf9f/mounts/shm": {
           "kb_size": "65536",
           "kb_used": "0",
           "kb_available": "65536",
@@ -2086,7 +2084,7 @@
             "pstore"
           ]
         },
-        "/sys/fs/cgroup/freezer": {
+        "/sys/fs/cgroup/net_cls,net_prio": {
           "fs_type": "cgroup",
           "mount_options": [
             "rw",
@@ -2095,7 +2093,38 @@
             "noexec",
             "relatime",
             "seclabel",
-            "freezer"
+            "net_prio",
+            "net_cls"
+          ],
+          "devices": [
+            "cgroup"
+          ]
+        },
+        "/sys/fs/cgroup/memory": {
+          "fs_type": "cgroup",
+          "mount_options": [
+            "rw",
+            "nosuid",
+            "nodev",
+            "noexec",
+            "relatime",
+            "seclabel",
+            "memory"
+          ],
+          "devices": [
+            "cgroup"
+          ]
+        },
+        "/sys/fs/cgroup/pids": {
+          "fs_type": "cgroup",
+          "mount_options": [
+            "rw",
+            "nosuid",
+            "nodev",
+            "noexec",
+            "relatime",
+            "seclabel",
+            "pids"
           ],
           "devices": [
             "cgroup"
@@ -2116,7 +2145,7 @@
             "cgroup"
           ]
         },
-        "/sys/fs/cgroup/perf_event": {
+        "/sys/fs/cgroup/blkio": {
           "fs_type": "cgroup",
           "mount_options": [
             "rw",
@@ -2125,13 +2154,13 @@
             "noexec",
             "relatime",
             "seclabel",
-            "perf_event"
+            "blkio"
           ],
           "devices": [
             "cgroup"
           ]
         },
-        "/sys/fs/cgroup/pids": {
+        "/sys/fs/cgroup/hugetlb": {
           "fs_type": "cgroup",
           "mount_options": [
             "rw",
@@ -2140,7 +2169,7 @@
             "noexec",
             "relatime",
             "seclabel",
-            "pids"
+            "hugetlb"
           ],
           "devices": [
             "cgroup"
@@ -2162,67 +2191,6 @@
             "cgroup"
           ]
         },
-        "/sys/fs/cgroup/net_cls,net_prio": {
-          "fs_type": "cgroup",
-          "mount_options": [
-            "rw",
-            "nosuid",
-            "nodev",
-            "noexec",
-            "relatime",
-            "seclabel",
-            "net_prio",
-            "net_cls"
-          ],
-          "devices": [
-            "cgroup"
-          ]
-        },
-        "/sys/fs/cgroup/blkio": {
-          "fs_type": "cgroup",
-          "mount_options": [
-            "rw",
-            "nosuid",
-            "nodev",
-            "noexec",
-            "relatime",
-            "seclabel",
-            "blkio"
-          ],
-          "devices": [
-            "cgroup"
-          ]
-        },
-        "/sys/fs/cgroup/memory": {
-          "fs_type": "cgroup",
-          "mount_options": [
-            "rw",
-            "nosuid",
-            "nodev",
-            "noexec",
-            "relatime",
-            "seclabel",
-            "memory"
-          ],
-          "devices": [
-            "cgroup"
-          ]
-        },
-        "/sys/fs/cgroup/hugetlb": {
-          "fs_type": "cgroup",
-          "mount_options": [
-            "rw",
-            "nosuid",
-            "nodev",
-            "noexec",
-            "relatime",
-            "seclabel",
-            "hugetlb"
-          ],
-          "devices": [
-            "cgroup"
-          ]
-        },
         "/sys/fs/cgroup/cpuset": {
           "fs_type": "cgroup",
           "mount_options": [
@@ -2233,6 +2201,36 @@
             "relatime",
             "seclabel",
             "cpuset"
+          ],
+          "devices": [
+            "cgroup"
+          ]
+        },
+        "/sys/fs/cgroup/freezer": {
+          "fs_type": "cgroup",
+          "mount_options": [
+            "rw",
+            "nosuid",
+            "nodev",
+            "noexec",
+            "relatime",
+            "seclabel",
+            "freezer"
+          ],
+          "devices": [
+            "cgroup"
+          ]
+        },
+        "/sys/fs/cgroup/perf_event": {
+          "fs_type": "cgroup",
+          "mount_options": [
+            "rw",
+            "nosuid",
+            "nodev",
+            "noexec",
+            "relatime",
+            "seclabel",
+            "perf_event"
           ],
           "devices": [
             "cgroup"
@@ -2263,13 +2261,13 @@
           "mount_options": [
             "rw",
             "relatime",
-            "fd=27",
+            "fd=32",
             "pgrp=1",
             "timeout=0",
             "minproto=5",
             "maxproto=5",
             "direct",
-            "pipe_ino=14150"
+            "pipe_ino=14497"
           ],
           "devices": [
             "systemd-1"
@@ -2286,6 +2284,16 @@
             "mqueue"
           ]
         },
+        "/sys/kernel/debug": {
+          "fs_type": "debugfs",
+          "mount_options": [
+            "rw",
+            "relatime"
+          ],
+          "devices": [
+            "debugfs"
+          ]
+        },
         "/dev/hugepages": {
           "fs_type": "hugetlbfs",
           "mount_options": [
@@ -2295,16 +2303,6 @@
           ],
           "devices": [
             "hugetlbfs"
-          ]
-        },
-        "/sys/kernel/debug": {
-          "fs_type": "debugfs",
-          "mount_options": [
-            "rw",
-            "relatime"
-          ],
-          "devices": [
-            "debugfs"
           ]
         },
         "/var/lib/nfs/rpc_pipefs": {
@@ -2330,7 +2328,7 @@
             "proc"
           ]
         },
-        "/run/docker/netns/adcabf3cdbd7": {
+        "/run/docker/netns/61bef63b42d9": {
           "fs_type": "proc",
           "mount_options": [
             "rw",
@@ -2348,13 +2346,13 @@
         "/dev/sda1,/": {
           "device": "/dev/sda1",
           "kb_size": "41921540",
-          "kb_used": "8033564",
-          "kb_available": "33887976",
+          "kb_used": "8055428",
+          "kb_available": "33866112",
           "percent_used": "20%",
           "mount": "/",
           "total_inodes": "20971008",
-          "inodes_used": "253906",
-          "inodes_available": "20717102",
+          "inodes_used": "254205",
+          "inodes_available": "20716803",
           "inodes_percent_used": "2%",
           "fs_type": "xfs",
           "mount_options": [
@@ -2410,13 +2408,13 @@
         "tmpfs,/run": {
           "device": "tmpfs",
           "kb_size": "941148",
-          "kb_used": "8748",
-          "kb_available": "932400",
+          "kb_used": "8784",
+          "kb_available": "932364",
           "percent_used": "1%",
           "mount": "/run",
           "total_inodes": "235287",
-          "inodes_used": "418",
-          "inodes_available": "234869",
+          "inodes_used": "430",
+          "inodes_available": "234857",
           "inodes_percent_used": "1%",
           "fs_type": "tmpfs",
           "mount_options": [
@@ -2472,34 +2470,34 @@
             "gid=1000"
           ]
         },
-        "overlay,/var/lib/docker/overlay2/1df133cd988946849dca651a6a324f45a6726b1725908b07a23932adcb00094d/merged": {
+        "overlay,/var/lib/docker/overlay2/cb52b06c29a302da2364e5f2981a86150d68968a5700cdfc24b2b019e858bd39/merged": {
           "device": "overlay",
           "kb_size": "41921540",
-          "kb_used": "8033564",
-          "kb_available": "33887976",
+          "kb_used": "8055428",
+          "kb_available": "33866112",
           "percent_used": "20%",
-          "mount": "/var/lib/docker/overlay2/1df133cd988946849dca651a6a324f45a6726b1725908b07a23932adcb00094d/merged",
+          "mount": "/var/lib/docker/overlay2/cb52b06c29a302da2364e5f2981a86150d68968a5700cdfc24b2b019e858bd39/merged",
           "total_inodes": "20971008",
-          "inodes_used": "253906",
-          "inodes_available": "20717102",
+          "inodes_used": "254205",
+          "inodes_available": "20716803",
           "inodes_percent_used": "2%",
           "fs_type": "overlay",
           "mount_options": [
             "rw",
             "relatime",
             "seclabel",
-            "lowerdir=/var/lib/docker/overlay2/l/KQKGZYIX3JY5VV2JSBNH3RI4OU:/var/lib/docker/overlay2/l/EMVBYA3CX5TQSGV4DUFW4X2OEK:/var/lib/docker/overlay2/l/BGJMNBYINDR54QOYEPQQQAZWBG:/var/lib/docker/overlay2/l/SCZLJWP6SZFD4BUA5QJ7UI2PL5:/var/lib/docker/overlay2/l/RFFUT67ZP2ASHWHQW2JTHS7X7I:/var/lib/docker/overlay2/l/WANEJFOZGDYKBGNSW7RO3D2EHW:/var/lib/docker/overlay2/l/WVLBYKBN4H2BUOLRFSA3JGPRUL:/var/lib/docker/overlay2/l/XPWTMWQ2VJH7AFMQ5BKARQYGJW:/var/lib/docker/overlay2/l/NUGW2ZS4AGBJSO4TR4SEWWVKNE:/var/lib/docker/overlay2/l/VAR727MPBGUPNFNWNCJKQMLZUY:/var/lib/docker/overlay2/l/7ZT6L5E3HQ6N6D4YLKWNALC2KA:/var/lib/docker/overlay2/l/FDCCVH7ESTBXLE43XJ3J7LUNWD",
-            "upperdir=/var/lib/docker/overlay2/1df133cd988946849dca651a6a324f45a6726b1725908b07a23932adcb00094d/diff",
-            "workdir=/var/lib/docker/overlay2/1df133cd988946849dca651a6a324f45a6726b1725908b07a23932adcb00094d/work"
+            "lowerdir=/var/lib/docker/overlay2/l/34PGHSJRKBSKGCEAW5WQSWRGBE:/var/lib/docker/overlay2/l/EMVBYA3CX5TQSGV4DUFW4X2OEK:/var/lib/docker/overlay2/l/BGJMNBYINDR54QOYEPQQQAZWBG:/var/lib/docker/overlay2/l/SCZLJWP6SZFD4BUA5QJ7UI2PL5:/var/lib/docker/overlay2/l/RFFUT67ZP2ASHWHQW2JTHS7X7I:/var/lib/docker/overlay2/l/WANEJFOZGDYKBGNSW7RO3D2EHW:/var/lib/docker/overlay2/l/WVLBYKBN4H2BUOLRFSA3JGPRUL:/var/lib/docker/overlay2/l/XPWTMWQ2VJH7AFMQ5BKARQYGJW:/var/lib/docker/overlay2/l/NUGW2ZS4AGBJSO4TR4SEWWVKNE:/var/lib/docker/overlay2/l/VAR727MPBGUPNFNWNCJKQMLZUY:/var/lib/docker/overlay2/l/7ZT6L5E3HQ6N6D4YLKWNALC2KA:/var/lib/docker/overlay2/l/FDCCVH7ESTBXLE43XJ3J7LUNWD",
+            "upperdir=/var/lib/docker/overlay2/cb52b06c29a302da2364e5f2981a86150d68968a5700cdfc24b2b019e858bd39/diff",
+            "workdir=/var/lib/docker/overlay2/cb52b06c29a302da2364e5f2981a86150d68968a5700cdfc24b2b019e858bd39/work"
           ]
         },
-        "shm,/var/lib/docker/containers/d4a6272931a8a0c0cb382b5ca74b425508d3269883af6f1941ae1e2f9ad20a82/mounts/shm": {
+        "shm,/var/lib/docker/containers/661ab3c5c4b2554b50c2ceb1d2bc61b6ec84d6fe3325719f43335f29c2a6cf9f/mounts/shm": {
           "device": "shm",
           "kb_size": "65536",
           "kb_used": "0",
           "kb_available": "65536",
           "percent_used": "0%",
-          "mount": "/var/lib/docker/containers/d4a6272931a8a0c0cb382b5ca74b425508d3269883af6f1941ae1e2f9ad20a82/mounts/shm",
+          "mount": "/var/lib/docker/containers/661ab3c5c4b2554b50c2ceb1d2bc61b6ec84d6fe3325719f43335f29c2a6cf9f/mounts/shm",
           "total_inodes": "235287",
           "inodes_used": "1",
           "inodes_available": "235286",
@@ -2595,9 +2593,9 @@
             "relatime"
           ]
         },
-        "cgroup,/sys/fs/cgroup/freezer": {
+        "cgroup,/sys/fs/cgroup/net_cls,net_prio": {
           "device": "cgroup",
-          "mount": "/sys/fs/cgroup/freezer",
+          "mount": "/sys/fs/cgroup/net_cls,net_prio",
           "fs_type": "cgroup",
           "mount_options": [
             "rw",
@@ -2606,7 +2604,36 @@
             "noexec",
             "relatime",
             "seclabel",
-            "freezer"
+            "net_prio",
+            "net_cls"
+          ]
+        },
+        "cgroup,/sys/fs/cgroup/memory": {
+          "device": "cgroup",
+          "mount": "/sys/fs/cgroup/memory",
+          "fs_type": "cgroup",
+          "mount_options": [
+            "rw",
+            "nosuid",
+            "nodev",
+            "noexec",
+            "relatime",
+            "seclabel",
+            "memory"
+          ]
+        },
+        "cgroup,/sys/fs/cgroup/pids": {
+          "device": "cgroup",
+          "mount": "/sys/fs/cgroup/pids",
+          "fs_type": "cgroup",
+          "mount_options": [
+            "rw",
+            "nosuid",
+            "nodev",
+            "noexec",
+            "relatime",
+            "seclabel",
+            "pids"
           ]
         },
         "cgroup,/sys/fs/cgroup/devices": {
@@ -2623,9 +2650,9 @@
             "devices"
           ]
         },
-        "cgroup,/sys/fs/cgroup/perf_event": {
+        "cgroup,/sys/fs/cgroup/blkio": {
           "device": "cgroup",
-          "mount": "/sys/fs/cgroup/perf_event",
+          "mount": "/sys/fs/cgroup/blkio",
           "fs_type": "cgroup",
           "mount_options": [
             "rw",
@@ -2634,12 +2661,12 @@
             "noexec",
             "relatime",
             "seclabel",
-            "perf_event"
+            "blkio"
           ]
         },
-        "cgroup,/sys/fs/cgroup/pids": {
+        "cgroup,/sys/fs/cgroup/hugetlb": {
           "device": "cgroup",
-          "mount": "/sys/fs/cgroup/pids",
+          "mount": "/sys/fs/cgroup/hugetlb",
           "fs_type": "cgroup",
           "mount_options": [
             "rw",
@@ -2648,7 +2675,7 @@
             "noexec",
             "relatime",
             "seclabel",
-            "pids"
+            "hugetlb"
           ]
         },
         "cgroup,/sys/fs/cgroup/cpu,cpuacct": {
@@ -2666,63 +2693,6 @@
             "cpu"
           ]
         },
-        "cgroup,/sys/fs/cgroup/net_cls,net_prio": {
-          "device": "cgroup",
-          "mount": "/sys/fs/cgroup/net_cls,net_prio",
-          "fs_type": "cgroup",
-          "mount_options": [
-            "rw",
-            "nosuid",
-            "nodev",
-            "noexec",
-            "relatime",
-            "seclabel",
-            "net_prio",
-            "net_cls"
-          ]
-        },
-        "cgroup,/sys/fs/cgroup/blkio": {
-          "device": "cgroup",
-          "mount": "/sys/fs/cgroup/blkio",
-          "fs_type": "cgroup",
-          "mount_options": [
-            "rw",
-            "nosuid",
-            "nodev",
-            "noexec",
-            "relatime",
-            "seclabel",
-            "blkio"
-          ]
-        },
-        "cgroup,/sys/fs/cgroup/memory": {
-          "device": "cgroup",
-          "mount": "/sys/fs/cgroup/memory",
-          "fs_type": "cgroup",
-          "mount_options": [
-            "rw",
-            "nosuid",
-            "nodev",
-            "noexec",
-            "relatime",
-            "seclabel",
-            "memory"
-          ]
-        },
-        "cgroup,/sys/fs/cgroup/hugetlb": {
-          "device": "cgroup",
-          "mount": "/sys/fs/cgroup/hugetlb",
-          "fs_type": "cgroup",
-          "mount_options": [
-            "rw",
-            "nosuid",
-            "nodev",
-            "noexec",
-            "relatime",
-            "seclabel",
-            "hugetlb"
-          ]
-        },
         "cgroup,/sys/fs/cgroup/cpuset": {
           "device": "cgroup",
           "mount": "/sys/fs/cgroup/cpuset",
@@ -2735,6 +2705,34 @@
             "relatime",
             "seclabel",
             "cpuset"
+          ]
+        },
+        "cgroup,/sys/fs/cgroup/freezer": {
+          "device": "cgroup",
+          "mount": "/sys/fs/cgroup/freezer",
+          "fs_type": "cgroup",
+          "mount_options": [
+            "rw",
+            "nosuid",
+            "nodev",
+            "noexec",
+            "relatime",
+            "seclabel",
+            "freezer"
+          ]
+        },
+        "cgroup,/sys/fs/cgroup/perf_event": {
+          "device": "cgroup",
+          "mount": "/sys/fs/cgroup/perf_event",
+          "fs_type": "cgroup",
+          "mount_options": [
+            "rw",
+            "nosuid",
+            "nodev",
+            "noexec",
+            "relatime",
+            "seclabel",
+            "perf_event"
           ]
         },
         "configfs,/sys/kernel/config": {
@@ -2762,29 +2760,19 @@
           "mount_options": [
             "rw",
             "relatime",
-            "fd=27",
+            "fd=32",
             "pgrp=1",
             "timeout=0",
             "minproto=5",
             "maxproto=5",
             "direct",
-            "pipe_ino=14150"
+            "pipe_ino=14497"
           ]
         },
         "mqueue,/dev/mqueue": {
           "device": "mqueue",
           "mount": "/dev/mqueue",
           "fs_type": "mqueue",
-          "mount_options": [
-            "rw",
-            "relatime",
-            "seclabel"
-          ]
-        },
-        "hugetlbfs,/dev/hugepages": {
-          "device": "hugetlbfs",
-          "mount": "/dev/hugepages",
-          "fs_type": "hugetlbfs",
           "mount_options": [
             "rw",
             "relatime",
@@ -2798,6 +2786,16 @@
           "mount_options": [
             "rw",
             "relatime"
+          ]
+        },
+        "hugetlbfs,/dev/hugepages": {
+          "device": "hugetlbfs",
+          "mount": "/dev/hugepages",
+          "fs_type": "hugetlbfs",
+          "mount_options": [
+            "rw",
+            "relatime",
+            "seclabel"
           ]
         },
         "sunrpc,/var/lib/nfs/rpc_pipefs": {
@@ -2821,9 +2819,9 @@
             "relatime"
           ]
         },
-        "proc,/run/docker/netns/adcabf3cdbd7": {
+        "proc,/run/docker/netns/61bef63b42d9": {
           "device": "proc",
-          "mount": "/run/docker/netns/adcabf3cdbd7",
+          "mount": "/run/docker/netns/61bef63b42d9",
           "fs_type": "proc",
           "mount_options": [
             "rw",
@@ -2884,7 +2882,7 @@
       "icon_name": "computer-vm",
       "chassis": "vm",
       "machine_id": "49913b8f8356416b8dcf3bac0ad152c4",
-      "boot_id": "e5e7bf3da0914ab49da4b2469cce7d07",
+      "boot_id": "fa50aa2830544221b26a737b59c0053b",
       "virtualization": "kvm",
       "operating_system": "CentOS Linux 7 (Core)",
       "cpe_os_name": "cpe",
@@ -2932,7 +2930,7 @@
       "search-state-factory": "/usr/local/share/factory/var",
       "search-configuration": "/root/.config"
     },
-    "ohai_time": 1553793446.9668198,
+    "ohai_time": 1553846077.3125236,
     "packages": {
       "libfastjson": {
         "epoch": "0",
@@ -6144,7 +6142,7 @@
       "ULONG_MAX": 18446744073709551615,
       "USHRT_MAX": 65535,
       "WORD_BIT": 32,
-      "_AVPHYS_PAGES": 45718,
+      "_AVPHYS_PAGES": 22494,
       "_NPROCESSORS_CONF": 1,
       "_NPROCESSORS_ONLN": 1,
       "_PHYS_PAGES": 470574,

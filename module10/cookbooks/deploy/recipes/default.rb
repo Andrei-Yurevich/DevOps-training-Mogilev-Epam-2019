@@ -42,22 +42,21 @@ docker_image 'tomcat' do
   tag '9.0.16-jre8'
 end
 
-# clone my repo
-execute 'cd $HOME && git clone https://github.com/Andrey1913/DevOps-training-Mogilev-Epam-2019 && cd DevOps-training-Mogilev-Epam-2019 && git checkout module4'
+# clone and checkout my repo
+execute 'cd $HOME && if [ ! -d /root/DevOps-training-Mogilev-Epam-2019 ] ; then git clone https://github.com/Andrey1913/DevOps-training-Mogilev-Epam-2019; fi \
+      && cd DevOps-training-Mogilev-Epam-2019 \
+      && git checkout module4'
+
 # build artifact
-execute 'cd $HOME/DevOps-training-Mogilev-Epam-2019 && ./gradlew build'
-# create artifact
-execute 'cd $HOME/DevOps-training-Mogilev-Epam-2019/ zip -r $HOME/module10-artifact.zip ./build'
+
+execute 'cd $HOME/DevOps-training-Mogilev-Epam-2019 && ./gradlew incr && ./gradlew build'
 
 execute 'cp $HOME/DevOps-training-Mogilev-Epam-2019/build/libs/task4.war $HOME/'
-
-execute 'rm -r $HOME/DevOps-training-Mogilev-Epam-2019'
 
 # Run on 8081; green
 run_green = docker_container 'green' do
   only_if 'nmap -p 8080 localhost | grep open'
   only_if 'nmap -p 8081 localhost | grep closed'
-  #execute 'docker stop blue ; docker rm blue; docker stop first_run_blue ; docker rm first_run_blue ; exit 0'
   repo 'tomcat'
   tag '9.0.16-jre8'
   port [ '8081:8080' ]
@@ -85,7 +84,6 @@ run_blue = docker_container 'blue' do
   tag '9.0.16-jre8'
   port [ '8080:8080' ]
   action :run
-  #network_mode 'host'
   volumes [ '/root/:/opt/' ]
   command "bash -c 'cp /opt/task4.war /usr/local/tomcat/webapps/ && ./bin/catalina.sh run'"
 end
@@ -106,7 +104,4 @@ first_run = docker_container 'first_run' do
   network_mode 'host'
   volumes [ '/root/:/opt/' ]
   command "bash -c 'cp /opt/task4.war /usr/local/tomcat/webapps/ && ./bin/catalina.sh run'"
-  #not_if { run_green.updated_by_last_action? }
-  #not_if { run_blue.updated_by_last_action? }
   end
-#
