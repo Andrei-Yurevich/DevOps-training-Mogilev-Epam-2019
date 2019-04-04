@@ -1,20 +1,23 @@
-MusicStore (test application)
-=============================
+### Task5. Octopus, Jenkins, MS SQL
 
-AppVeyor: [![AppVeyor][appveyor-badge]][appveyor-build]
+#### Screenshots:
+##### Free stype job configuration(xml also attached):</br></br>
+![alt tag](https://psv4.userapi.com/c848036/u497893780/docs/d16/e93657616090/screencapture-127-0-0-1-8080-job-build_asp-configure-2019-04-04-05_54_52.png)
 
-Travis:   [![Travis][travis-badge]][travis-build]
+##### Jenkins build output:</br></br>
+![alt tag](https://pp.userapi.com/c850632/v850632390/f0e51/zkY9D8oZOOs.jpg)
 
-[appveyor-badge]: https://ci.appveyor.com/api/projects/status/ja8a7j6jscj7k3xa/branch/dev?svg=true
-[appveyor-build]: https://ci.appveyor.com/project/aspnetci/MusicStore/branch/dev
-[travis-badge]: https://travis-ci.org/aspnet/MusicStore.svg?branch=dev
-[travis-build]: https://travis-ci.org/aspnet/MusicStore
+##### Build history:</br></br>
+![alt tag](https://pp.userapi.com/c850632/v850632390/f0e36/o7PX0JRlEvE.jpg)
 
-This project is part of ASP.NET Core. You can find samples, documentation and getting started instructions for ASP.NET Core at the [Home](https://github.com/aspnet/home) repo.
+##### Job parameter:</br></br>
+![alt tag](https://pp.userapi.com/c850632/v850632390/f0e3f/0SE6gEqepsg.jpg)
 
-## About this repo
+##### Deploy to QA:</br></br>
+![alt tag](https://pp.userapi.com/c850632/v850632390/f0e48/31iSNuVAYKk.jpg)
 
-This repository is a test application used for ASP.NET Core internal test processes.
-It is not intended to be a representative sample of how to use ASP.NET Core.
+##### Octopus inline script:</br></br>
+![alt tag](https://pp.userapi.com/c850632/v850632390/f0e5a/JVOdkl6c9tM.jpg)
 
-Samples and docs for ASP.NET Core can be found here: <https://docs.asp.net>.
+##### Octopus deploy history
+![alt tag](https://pp.userapi.com/c850632/v850632390/f0f01/DUeFey2qC3k.jpg)
