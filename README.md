@@ -1,9 +1,6 @@
 ### Task5. Octopus, Jenkins, MS SQL
 
 #### Screenshots:
-##### Free stype job configuration(xml also attached):</br></br>
-![alt tag](https://psv4.userapi.com/c848036/u497893780/docs/d16/e93657616090/screencapture-127-0-0-1-8080-job-build_asp-configure-2019-04-04-05_54_52.png)
-
 ##### Jenkins build output:</br></br>
 ![alt tag](https://pp.userapi.com/c850632/v850632390/f0e51/zkY9D8oZOOs.jpg)
 
