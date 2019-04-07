@@ -1,4 +1,5 @@
 provider "aws" {
+  # this creds already deleted
   access_key = "AKIASKYJ3U2LZHNHEFFR"
   secret_key = "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"
   region     = "us-east-1"
