@@ -7,14 +7,32 @@ provider "aws" {
 ###########################################################Create vpc
 resource "aws_vpc" "main" {
   cidr_block = "10.0.0.0/16"
+
 }
+
+#resource "aws_internet_gateway" "gw" {
+#  vpc_id = "${aws_vpc.main.id}"
+#
+#  tags = {
+#    Name = "main"
+#  }
+#}
+
 
 resource "aws_subnet" "subnet-task11" {
   vpc_id                  = "${aws_vpc.main.id}"
   availability_zone       = "us-east-1f"
-  cidr_block              = "10.0.0.0/24"
+  cidr_block              = "10.0.10.0/24"
   map_public_ip_on_launch = "false"
 }
+
+resource "aws_subnet" "subnet-second" {
+  vpc_id                  = "${aws_vpc.main.id}"
+  availability_zone       = "us-east-1a"
+  cidr_block              = "10.0.11.0/24"
+  map_public_ip_on_launch = "false"
+}
+
 
 ###########################################################Create security group
 resource "aws_security_group" "security_group_1" {
@@ -63,6 +81,7 @@ resource "aws_launch_configuration" "launch-conf-task11" {
   }
 }
 
+###########################################################Create auto scaling group
 resource "aws_autoscaling_group" "asg-task11" {
   name                 = "asg-task11"
   launch_configuration = "${aws_launch_configuration.launch-conf-task11.name}"
@@ -78,3 +97,17 @@ resource "aws_autoscaling_group" "asg-task11" {
   }
 }
 
+###########################################################Create application LB
+resource "aws_lb" "module11-lb" {
+  name               = "module11-lb"
+  internal           = false
+  load_balancer_type = "application"
+  security_groups    = ["${aws_security_group.security_group_1.id}"]
+  subnets            = ["${aws_subnet.subnet-task11.id}","${aws_subnet.subnet-second.id}"]
+
+  enable_deletion_protection = true
+
+  tags = {
+    Environment = "production"
+  }
+}
